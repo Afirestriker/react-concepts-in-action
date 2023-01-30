@@ -7,7 +7,6 @@ function Hello() {
 function App() {
     return (
         <div>
-            <br />
             <h3>React example #2 (Reusable component)</h3>
             <Hello />
             <Hello />
@@ -17,4 +16,4 @@ function App() {
     );
 }
 
-ReactDOM.render(<App />, document.querySelector('#app2'));
+ReactDOM.render(<App />, document.querySelector('#appComponent'));

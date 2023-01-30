@@ -10,21 +10,9 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
-    <div id="app"></div>
-
-    <script type="text/babel">
-        function App() {
-            return (
-                <div>
-                    <div>Hello World!</div> 
-                    <div>Hello React!</div> 
-                </div>
-            );
-        }
-        
-        ReactDOM.render(<App />, document.querySelector('#app'));
-    </script>
+    <div id="appProps"></div>
 </body>
 </html>
-<!-- React code in external javaScript file -->
-<!-- <script type="text/babel" src="001_react-basic.js"></script> -->
+
+<!-- Using react props to modify content dynamically in 003_react-basic.js -->
+<script type="text/babel" src="003_react-props.js"></script>
