@@ -1,0 +1,13 @@
+.equation {
+    padding: 5px;
+    font-weight: bold;
+}
+
+.equationBox {
+    border: 1px solid black;
+    height: 15px;
+    width: 15px;
+    padding: 4px;
+    text-align: center;
+    margin: 4px;
+}
