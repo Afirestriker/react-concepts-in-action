@@ -1,13 +1,12 @@
 .equation {
-    padding: 5px;
-    font-weight: bold;
+    display: flex;
+    margin: 8px 0px;
 }
 
 .equationBox {
-    border: 1px solid black;
-    height: 15px;
-    width: 15px;
+    font-size: 25px;
+    font-weight: bold;
     padding: 4px;
     text-align: center;
-    margin: 4px;
+    margin: 2px;
 }
