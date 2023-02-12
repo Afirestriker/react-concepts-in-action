@@ -1,12 +1,20 @@
 .equation {
+    text-align: center;
+}
+
+.equationItems {
     display: flex;
-    margin: 8px 0px;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 72px;
+    margin: 4px 0px;
 }
 
 .equationBox {
-    font-size: 25px;
-    font-weight: bold;
-    padding: 4px;
-    text-align: center;
-    margin: 2px;
+    padding: 0px 5px;
+}
+
+.won {
+    color: green;
+    font-size: 95px;
 }
