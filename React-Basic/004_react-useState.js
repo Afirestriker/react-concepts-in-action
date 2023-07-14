@@ -1,7 +1,7 @@
 /**
- * useState() is a function in React, which return two things which is basically a array of two things
+ * useState() is a function in React, from whcih we destruct two things
  * 1) A {variable}
- * 2) A function to modify {variable} value
+ * 2) A function for modifying {variable} value
  */
 
 function AppUseState() {

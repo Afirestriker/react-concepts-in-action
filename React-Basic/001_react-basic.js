@@ -10,5 +10,5 @@ function App() {
     );
 }
 
-/* Using ReactDOM library, we render react component into web page in HTML format */
+/* Using ReactDOM library, we render react component on web page */
 ReactDOM.render(<App />, document.querySelector('#app'));
