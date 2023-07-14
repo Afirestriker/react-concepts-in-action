@@ -1,5 +1,5 @@
 # React
-React is a JavaScript library that allows developers to build user interfaces using a declarative approach. 
+React is a JavaScript library that allows developers to build dynamic and intetractive user interfaces using a declarative approach. 
 
 ## Declarative v Imperative Programming Approach
 Before moving forward, let's first understand the difference between 'Imperative' and 'Declarative' programming. From a view of 5'yrs kid.
@@ -26,7 +26,7 @@ It is made up of three main packages:
 JSX is an extension to JavaScript that allows developers to mix HTML and JavaScript together. This makes it easy to create and manage components in React.
 
 # React Component
-A React component is a JavaScript function that represents a React component. The powe of components is that they can be reused and parameterized with properties (props) to display different information based on the values of the props.
+A React component is a JavaScript function that represents a React component. The power of components is that they can be reused and parameterized with properties (props) to display different information based on the values of the props.
 
 Example:
 ```js
