@@ -46,7 +46,7 @@ function Names({ nameList = [] }) {
 }
 
 // Interactivity with State and event handlers in react
-function CounterButton() {
+function ToggleButton() {
 	const [visibility, setVisibility] = React.useState("initial");
 
     function clickHandlerFunction() {
@@ -55,8 +55,8 @@ function CounterButton() {
 
 	return (
         <>
-            <button onClick={clickHandlerFunction}>Toggle</button> :
-            <span style={{ display: visibility }}>Text To Toggle</span>
+            <button onClick={clickHandlerFunction}> {visibility == "none" ? "Show" : "Hide"} Text &gt; </button>
+            <span style={{ display: visibility }}> React Event Handling Using State </span>
         </>
     );
 }
@@ -68,17 +68,17 @@ function CounterButton() {
  * while the <Header /> is render inside the main #app div, bcoz of the use
  *     of fragment <> in header component.
  */
-function App() {
+function Homepage() {
 	return (
         <>
             <Title title="React Practise" />
-            <Header context="Run..Build..Deploy..." />
+            <Header context="Run...Build...Deploy...🚀" />
             <Names
                 nameList={["Kate", "Mike", "Jake", "Harry", "Hermione", "Ron"]}
             />
-            <CounterButton />
+            <ToggleButton />
         </>
     );
 }
 
-ReactDOM.render(<App />, app);
+ReactDOM.render(<Homepage />, app);
