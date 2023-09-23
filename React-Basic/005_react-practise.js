@@ -17,12 +17,12 @@ function Title(props) {
 /**
  * Uses object destructring to directly use the parameter
  * instead of using props.param
+ * The empty element <> used here is called fragment,
+ * Fragment helps to render UI without add one more element
+ *     and directl adding the componenet inside the calling componenet
+ *     i.e., parent component.
  */
 function Header({ context }) {
-    /**
-     * The empty element <> here call fragment,
-     * Help to render UI in the same div instead of adding another div.
-     */
     return (
         <>
             <h2> {context} </h2>
@@ -49,23 +49,26 @@ function Names({ nameList = [] }) {
 function CounterButton() {
 	const [visibility, setVisibility] = React.useState("initial");
 
-    function updateCounter() {
+    function clickHandlerFunction() {
 		setVisibility(visibility === "initial" ? "none" : "initial");
     }
 
 	return (
         <>
-            <button onClick={updateCounter}>Toggle</button> : <span style={{display: visibility}}>Text To Toggle</span>
+            <button onClick={clickHandlerFunction}>Toggle</button> :
+            <span style={{ display: visibility }}>Text To Toggle</span>
         </>
     );
 }
 
+/**
+ * The main <App /> componenet
+ * If you inspect,
+ * The <Title /> is render inside an nested <div>
+ * while the <Header /> is render inside the main #app div, bcoz of the use
+ *     of fragment <> in header component.
+ */
 function App() {
-    /**
-     * If you inspect,
-     * The <Title /> is render inside an nested <div>
-     * while the <Header /> is render inside the main #app div, bcoz of fragment <>.
-     */
 	return (
         <>
             <Title title="React Practise" />
