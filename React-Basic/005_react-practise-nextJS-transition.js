@@ -1,10 +1,5 @@
-const app = document.getElementById("app");
+import { useState } from "react";
 
-/**
- * The same way like html element has attributes.
- * We can pass data to component.
- * And collect them via 'props'
- */
 function Title(props) {
     return (
         <div>
@@ -14,14 +9,6 @@ function Title(props) {
     );
 }
 
-/**
- * Uses object destructring to directly use the parameter
- * instead of using props.param
- * The empty element <> used here is called fragment,
- * Fragment helps to render UI without add one more element
- *     and directl adding the componenet inside the calling componenet
- *     i.e., parent component.
- */
 function Header({ context }) {
     return (
         <>
@@ -30,7 +17,6 @@ function Header({ context }) {
     );
 }
 
-// Iterating through lists
 function Names({ nameList = [] }) {
     return (
         <ul>
@@ -45,15 +31,14 @@ function Names({ nameList = [] }) {
     );
 }
 
-// Interactivity with State and event handlers in react
 function ToggleButton() {
-	const [visibility, setVisibility] = React.useState("initial");
+    const [visibility, setVisibility] = useState("initial");
 
     function clickHandlerFunction() {
-		setVisibility(visibility === "initial" ? "none" : "initial");
+        setVisibility(visibility === "initial" ? "none" : "initial");
     }
 
-	return (
+    return (
         <>
             <button onClick={clickHandlerFunction}> {visibility == "none" ? "Show" : "Hide"} Text &gt; </button>
             <span style={{ display: visibility }}> React Event Handling Using State </span>
@@ -61,15 +46,8 @@ function ToggleButton() {
     );
 }
 
-/**
- * The main <App /> componenet
- * If you inspect,
- * The <Title /> is render inside an nested <div>
- * while the <Header /> is render inside the main #app div, bcoz of the use
- *     of fragment <> in header component.
- */
 function Homepage() {
-	return (
+    return (
         <>
             <Title title="React Practise" />
             <Header context="Run...Build...Deploy...🚀" />
@@ -80,5 +58,3 @@ function Homepage() {
         </>
     );
 }
-
-ReactDOM.render(<Homepage />, app);
