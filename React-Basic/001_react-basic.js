@@ -1,7 +1,7 @@
 /* App is user defined react component, which return some html content */
 function App() {
     return (
-        /* Writting HTML inside JavaScript */
+        /* Writing HTML inside JavaScript */
         <div>
             <h3>React example #1</h3>
             <div>Hello World!</div>
