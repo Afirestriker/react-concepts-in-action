@@ -34,21 +34,40 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
 
 * Lesson 4 - Components
   * Types of Components
-    * Stateless Functional Components. **(Recommended)**
-    * Stateful Class Components.
+    * Functional Components. **(Recommended)**
+    * Class Components.
 
 * Lesson 5 - Functional Components
+  * File - Greet.js
   * Create a functional component in 2 ways.
     * 1. Using function keyword.
     * 2. An flat arrow ES6 function. **(Recommended)**
 
 * Lesson 6 - Class Components
+  * File - Welcome.js
   * Import React `Component class` from 'react'.
-  * Create a ES6 class which inherites the react Component class.
+  * Create a ES6 class `Welcome` which inherites the react Component class.
   * Create a render() method that return an HTML heading tag.
 
 * Lesson 7 - React Hooks/ Hooks Update
-  *
+  * React Introducted Hooks in 16.7.0 - APlha release.
+  * Hooks make it possible to use State in Functional components.
+  * Mitegate the frustration of using `this` keyword in the class component.
+
+* Lesson 8 - JSX
+  * File - Hello.js
+  * JavaScript XML (JSX) - Extension to JavaScript language syntax.
+  * Wtire XML like code for elements, and components.
+  * JSX tags have a tag name, attributes, and children.
+  * JSX is not necessity to write React applications. It help your code simpler and elegant (stylish in appearance).
+  * Using Babel - JSX is transpiles to pure JavaScript which is then interpret by the browsers.
+  * -------------------------------------------------------
+  * JSX Differences
+    * class --> className
+    * for --> htmlFor
+    * camelCase porperty name conventions
+      * onclick --> onClick
+      * tabIndex --> tabIndex
 
 **Q&A:**
 * Q1. How the react application runs. How the files are called and the components gets render on web page.
@@ -61,8 +80,8 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
 
 * Q2. Difference types of componens in react
   * Answer
-    * 1st - Stateless `Functional` Component
-    * 2nd - Stateful `Class` Component
+    * 1st - `Functional` Component.
+    * 2nd - `Class` Component.
 
 * Q3. Difference between Named export and Default Export
   * Answer
