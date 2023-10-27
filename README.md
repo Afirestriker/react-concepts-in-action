@@ -1,8 +1,8 @@
 # React
-React is a JavaScript library that allows developers to build dynamic and intetractive user interfaces using a declarative approach. 
+React is a JavaScript library that allows developers to build dynamic and intetractive user interfaces using a declarative approach.
 
 ## Declarative v Imperative Programming Approach
-Before moving forward, let's first understand the difference between 'Imperative' and 'Declarative' programming. From a view of 5'yrs kid.
+Before moving forward, let's first understand the difference between 'Imperative' and 'Declarative' programming.
 
 Declarative programming and imperative programming are two different ways of telling a computer what to do.
 
@@ -30,25 +30,25 @@ A React component is a JavaScript function that represents a React component. Th
 
 Example:
 ```js
-function Hello(props) { 
+function Hello(props) {
   return (
     Hello {props.name}
-  ); 
+  );
 }
 ```
 
 
 # React State
-State is any kind of data that we want to store inside of the component itself. React provides an inbuilt function `useState` to create and initialize state.
+State is any kind of data that we want to store inside of the component itself. React provides an inbuilt function/ Hooks called `useState` to create and initialize state.
 
 SYNTAX:
 ```js
-const [varName, setVarName] = React.useState(0); 
+const [varName, setVarName] = React.useState(0);
 ```
 
 Explanation:
 - `varName` is any valid JavaScript literal.
-- `setVarName` is a function using which the value of `'varName'` can be modified. We can't just write `'varName=varName+1'`, we have to use `setVarName` i.e. `setVarName(varName+1)` to update the value by one.
+- `setVarName` is a function using which the value of `'varName'` can be modified. We can't just write `'varName = varName + 1'`, we have to use `setVarName` i.e. `setVarName(varName + 1)` to update the value by one.
 
 Example 2:
 Setting multiple React state using objects:
