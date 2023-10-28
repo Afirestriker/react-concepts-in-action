@@ -7,9 +7,21 @@ import Hello from "./components/Hello";
 function App() {
     return (
         <div className="App">
-            {/* <Greet name="Mike"/> */}
-            { /*<Welcome /> */}
-            <Hello />
+            {/** Functional Component */}
+            <Greet name="Mike" heroName="Superman">
+                <p>This is children props</p>
+            </Greet>
+            <Greet name="Kate" heroName="Batman">
+                <button>Action</button>
+            </Greet>
+            <Greet name="Diana" heroName="Wonder Woman"/>
+
+            {/** Class component */}
+            <Welcome name="Mike" heroName="Superman" />
+            <Welcome name="Kate" heroName="Batman" />
+            <Welcome name="Diana" heroName="Wonder Woman"/>
+
+            {/* <Hello /> */}
         </div>
     );
 }

@@ -69,6 +69,21 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
       * onclick --> onClick
       * tabIndex --> tabIndex
 
+* Lesson 9 - Props
+  * Props is short for properties.
+  * Props are simply an object that contains properties and their values, passed from the parent component.
+  * Props are optional inputs that a component can accept that allows component to be dynamic.
+  * Props in Functional component
+    * How to pass component `attributes` and recieve as props properties.
+    * How to pass component `children` i.e, dynamic html content inside component and recieving it using the reserved children property of the props object.
+  * Props in Classs component
+    * Unlike functional component. To use props in React Class component we need to make use of `this` keyword.
+    * For Example: ```this.props.name / this.props.heroName / this.props.children ```
+  * **Props are immutable i.e. you cannot changes the props property values**
+
+* Lesson 10 - State
+  *
+
 **Q&A:**
 * Q1. How the react application runs. How the files are called and the components gets render on web page.
   * Answer
