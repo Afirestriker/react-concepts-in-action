@@ -82,7 +82,12 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
   * **Props are immutable i.e. you cannot changes the props property values**
 
 * Lesson 10 - State
-  *
+  * state is nothing but an object, that is privately mentained inside a component.
+  * A state can influence what is rendered in the browser and lastly state can be changed within the component
+  * State is similar to declaring a variable inside the function body.
+  * Both props and state hold information that influences the UI in the browser.
+  * Using state in the Class component.
+  * setState() is used to change the state value.
 
 **Q&A:**
 * Q1. How the react application runs. How the files are called and the components gets render on web page.
