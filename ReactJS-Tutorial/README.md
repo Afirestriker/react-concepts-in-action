@@ -61,7 +61,6 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
   * JSX tags have a tag name, attributes, and children.
   * JSX is not necessity to write React applications. It help your code simpler and elegant (stylish in appearance).
   * Using Babel - JSX is transpiles to pure JavaScript which is then interpret by the browsers.
-  * -------------------------------------------------------
   * JSX Differences
     * class --> className
     * for --> htmlFor
@@ -83,11 +82,78 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
 
 * Lesson 10 - State
   * state is nothing but an object, that is privately mentained inside a component.
-  * A state can influence what is rendered in the browser and lastly state can be changed within the component
+  * A state can influence what is rendered in the browser and state can be changed within the component.
   * State is similar to declaring a variable inside the function body.
   * Both props and state hold information that influences the UI in the browser.
-  * Using state in the Class component.
-  * setState() is used to change the state value.
+  * Using state in the **Class component**.
+    * `this.state = {}` is use to declare state in class component.
+      * *NOTE: The only place where you can assign `this.state` is the class constructor*
+    * If we want to update/ change the state value we have to use `this.setState()` method.
+
+* Lesson 11 - setState()
+  * `this.setState()` method is used to change/ update the state value.
+  * `this.setState()` is an `async` method.
+  * We can though update the `this.state.count` value without using this.setState(). But it will not re-render the UI.
+  * This is the main reason why we use `this.setState()`.
+  * ```js
+      import React, { Component } from 'react';
+
+      class Counter extends Component {
+        constructor() {
+          super();
+          this.state = {
+            count: 0
+          };
+        }
+
+        increaseCount() {
+          this.setState([
+            count: this.state.count + 1
+          ])
+        }
+
+        render() {
+          return(
+            <>
+              <h1>Count: {this.state.count} </h1>
+              <button onClick={() => increaseCount()}> Increase Count </button>
+            </>
+          )
+        }
+      }
+      ```
+
+  * **Do and Don't for React state**
+    * Always make use of setState() and never modify the state directly. Because when we modify state directly React will not re-render the component. The setState() method will let React know that it has to re-render the component.
+    * Remember setState() is an `async` method.
+      * Whenever you want to execute a code after the state has been change/ updated. Do not place that code after the setState method.
+      * Instead, placed that code within the setState callback function which is passed as the second parameter to the setState() method.
+      * ```js
+          this.setState({
+              // React state key: value
+            },
+            () => {
+              // callback function
+            }
+          )
+          ```
+      * *Note: If we call the increaseCount() function 5 times, the state value still get updated by 1. This kind of behaviour is because React may group multiple setState() call into a single update for better performance*
+      * So, when you want to update the state based on the previous state, we need to pass in a function as an first argument instead of a regular object to the setState() method. This helps because the function has an access to the previous-state which is useful to calculate the new state value.
+      * ```js
+          this.setState(
+            // first argument as function
+            (prevState, props) => ({
+              count: prevState.count + 1
+            }),
+
+            // second argument - a callback function
+            () => {
+              // statement to execute
+            }
+          )
+        ```
+
+<br/>
 
 **Q&A:**
 * Q1. How the react application runs. How the files are called and the components gets render on web page.
