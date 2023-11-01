@@ -9,27 +9,25 @@ import Counter from "./components/Counter";
 function App() {
     return (
         <div className="App">
-            <Counter />
+            {/* <Counter /> */}
 
             {/* <Message /> */}
 
             {/** Functional Component */}
-            {/*
-                <Greet name="Mike" heroName="Superman">
-                    <p>This is children props</p>
-                </Greet>
-                <Greet name="Kate" heroName="Batman">
-                    <button>Action</button>
-                </Greet>
-                <Greet name="Diana" heroName="Wonder Woman"/>
-            */}
+            {/* <Greet name="Mike" heroName="Superman">
+                <p>This is children props</p>
+            </Greet>
+            <Greet name="Kate" heroName="Batman">
+                <button>Action</button>
+            </Greet>
+            <Greet name="Diana" heroName="Wonder Woman"/> */}
+
 
             {/** Class component */}
-            {/*
-                <Welcome name="Mike" heroName="Superman" />
-                <Welcome name="Kate" heroName="Batman" />
-                <Welcome name="Diana" heroName="Wonder Woman"/>
-            */}
+            <Welcome name="Mike" heroName="Superman" />
+            <Welcome name="Kate" heroName="Batman" />
+            <Welcome name="Diana" heroName="Wonder Woman"/>
+
 
             {/* <Hello /> */}
         </div>

@@ -153,6 +153,16 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
           )
         ```
 
+* Lesson 12 - Destructuring props and state
+  * Destructuring props in functional component ( `Greet.js` ).
+    * Destructuring in function parameters.
+    * Destructuring in function body.
+  * Descturturing prosp in class component. ( `Welcome.js` ).
+    * In class component, we generally trend to destructure props/ state in the render method.
+
+
+
+
 <br/>
 
 **Q&A:**
