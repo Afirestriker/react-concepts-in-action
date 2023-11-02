@@ -159,9 +159,35 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
     * Destructuring in function body.
   * Descturturing prosp in class component. ( `Welcome.js` ).
     * In class component, we generally trend to destructure props/ state in the render method.
+  * Example:
+  * ```js
+      // functional component parameter
+      const Greet = ({name, heroName}) => {
+        // function body
+      }
 
+      // class component render() method
+      const {name, heroName} = this.props;
+    ```
 
+* Lesson 13 - Event Handling ( `FunctionClick.js` and `ClassClick.js` )
+  * Design a button and add a click event to execute a basic code.
+  * unlike html and vanilla JavasScript, In React the dom envent are named in camelCase notation rahter than lowercase.
+  * In JSX we pass a function as an event-handler rather than a string.
+  * `Common Mistake`: The event handler is a function and not a function call. So do not write parenthesis () while assigning a function to eventHandler
+  * Example:
+  * ```js
+      // react function compoenent statement...
+      return (
+        <>
+          <button onClick={clickHandler}>Click</button> // this is an exmple of event handler function. ✅
+          <button onClick={clickHandler()}>Click</button> // this is an example of event handler function call. ❌
+        </>
+      )
+      // rest of the code...
+    ```
 
+* Lesson 14 - Binding event handlers
 
 <br/>
 
