@@ -38,24 +38,24 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
     * Class Components.
 
 * Lesson 5 - Functional Components
-  * File - Greet.js
+  * File - **Greet.js**
   * Create a functional component in 2 ways.
     * 1. Using function keyword.
     * 2. An flat arrow ES6 function. **(Recommended)**
 
 * Lesson 6 - Class Components
-  * File - Welcome.js
-  * Import React `Component class` from 'react'.
+  * File - **Welcome.js**
+  * Import React `Component` class from 'react'.
   * Create a ES6 class `Welcome` which inherites the react Component class.
-  * Create a render() method that return an HTML heading tag.
+  * Create a `render()` method that return an HTML heading tag.
 
 * Lesson 7 - React Hooks/ Hooks Update
-  * React Introducted Hooks in 16.7.0 - APlha release.
+  * React Introducted Hooks in 16.7.0 - Alpha release.
   * Hooks make it possible to use State in Functional components.
   * Mitegate the frustration of using `this` keyword in the class component.
 
 * Lesson 8 - JSX
-  * File - Hello.js
+  * File - **Hello.js**
   * JavaScript XML (JSX) - Extension to JavaScript language syntax.
   * Wtire XML like code for elements, and components.
   * JSX tags have a tag name, attributes, and children.
@@ -87,7 +87,7 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
   * Both props and state hold information that influences the UI in the browser.
   * Using state in the **Class component**.
     * `this.state = {}` is use to declare state in class component.
-      * *NOTE: The only place where you can assign `this.state` is the class constructor*
+      * *NOTE: The only place where you can assign `this.state` is in the class constructor*
     * If we want to update/ change the state value we have to use `this.setState()` method.
 
 * Lesson 11 - setState()
@@ -167,14 +167,17 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
       }
 
       // class component render() method
-      const {name, heroName} = this.props;
+      render() {
+        const {name, heroName} = this.props;
+      }
     ```
 
-* Lesson 13 - Event Handling ( `FunctionClick.js` and `ClassClick.js` )
+* Lesson 13 - Event Handling
+  * File - **FunctionClick.js** and **ClassClick.js`**
   * Design a button and add a click event to execute a basic code.
   * unlike html and vanilla JavasScript, In React the dom envent are named in camelCase notation rahter than lowercase.
   * In JSX we pass a function as an event-handler rather than a string.
-  * `Common Mistake`: The event handler is a function and not a function call. So do not write parenthesis () while assigning a function to eventHandler
+  * `Common Mistake made by beginners`: **The event handler is a function and not a function call. So do not write parenthesis () while assigning a function to eventHandler**
   * Example:
   * ```js
       // react function compoenent statement...
@@ -188,6 +191,13 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
     ```
 
 * Lesson 14 - Binding event handlers
+  * File - **EventBind.js**
+  * We bind event in React, purely because of the way `this` keyword works in JavaScript, and it is not on how React works.
+  * Binding `this` using 4 different approaches
+    * Approach 1 - Binding in render method (Performance implecation).
+    * Approach 2 - Using arrow function in render method (Performance implecation, but good when need to pass parenthesis).
+    * Approach 3 - Binding in Class constructor. From React Doc (Go to approach).
+    * Approach 4 - Declare handler function as arrow function. From React Doc (Go to approach).
 
 <br/>
 

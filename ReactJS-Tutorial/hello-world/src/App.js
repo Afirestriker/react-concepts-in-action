@@ -7,36 +7,33 @@ import Message from "./components/Message";
 import Counter from "./components/Counter";
 import FunctionClick from "./components/FunctionClick";
 import ClassClick from "./components/ClassClick";
+import EventBind from "./components/EventBind";
 
 function App() {
     return (
         <div className="App">
-            <FunctionClick />
 
-            <br/>
-            <br/>
+            <EventBind />
 
-            <ClassClick />
+            {/* //* 📌Event Handling */}
+            {/* <FunctionClick /> */}
+            {/* <ClassClick /> */}
 
+            {/* //* 📌setState with prevState and callback */}
             {/* <Counter /> */}
 
+            {/* // * 📌State and setState */}
             {/* <Message /> */}
 
-            {/** Functional Component */}
-            {/* <Greet name="Mike" heroName="Superman">
-                <p>This is children props</p>
-            </Greet>
-            <Greet name="Kate" heroName="Batman">
-                <button>Action</button>
-            </Greet>
-            <Greet name="Diana" heroName="Wonder Woman"/> */}
+            {/* // * 📌Functional Components */}
+            {/* <Greet name="Mike" heroName="Superman"> <p>This is children props</p> </Greet> */}
+            {/* <Greet name="Kate" heroName="Batman"> <button>Action</button> </Greet> */}
+            {/* <Greet name="Diana" heroName="Wonder Woman"/> */}
 
-
-            {/** Class component */}
-            {/* <Welcome name="Mike" heroName="Superman" />
-            <Welcome name="Kate" heroName="Batman" />
-            <Welcome name="Diana" heroName="Wonder Woman"/> */}
-
+            {/* // * 📌Class Components */}
+            {/* <Welcome name="Mike" heroName="Superman" /> */}
+            {/* <Welcome name="Kate" heroName="Batman" /> */}
+            {/* <Welcome name="Diana" heroName="Wonder Woman"/> */}
 
             {/* <Hello /> */}
         </div>
