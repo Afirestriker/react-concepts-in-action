@@ -199,6 +199,12 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
     * Approach 3 - Binding in Class constructor. From React Doc (Go to approach).
     * Approach 4 - Declare handler function as arrow function. From React Doc (Go to approach).
 
+* Lesson 15 - Method as props
+  * File - **ParentComponent.js** and **ChildComponent.js**
+  * Learned how to pass a method declared in the parent-component to the child-component using props.
+  * Very Similar to how we pass information from parent to child component using attributes.
+  * Learned how to pass a parameters to while calling the parent-component function using flat arrow function.
+
 <br/>
 
 **Q&A:**
