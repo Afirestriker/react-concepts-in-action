@@ -205,6 +205,14 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
   * Very Similar to how we pass information from parent to child component using attributes.
   * Learned how to pass a parameters to while calling the parent-component function using flat arrow function.
 
+* Lesson 16 - Conditional Rendering
+  * File - **UserGreeting.js**
+  * Format the JSX rendering based on a condition using 4 different approach.
+    * Approach 1 - if-else
+    * Approach 2 - Element Variables
+    * Approach 3 - Ternary Operator (?:)
+    * Approach 4 - Short-circuit Operator (&&)
+
 <br/>
 
 **Q&A:**
