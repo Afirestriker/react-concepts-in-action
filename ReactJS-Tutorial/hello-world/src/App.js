@@ -10,14 +10,21 @@ import ClassClick from "./components/ClassClick";
 import EventBind from "./components/EventBind";
 import ParentComponent from './components/ParentComponent';
 import UserGreeting from './components/UserGreeting';
+import NameList from './components/NameList';
+import PersonList from "./components/PersonList";
 
 function App() {
     return (
         <div className="App">
 
-            <UserGreeting />
+            {/* //* 📌List Rendering */}
+            <PersonList />
+            <NameList />
 
-            {/* //📌 Pass Method as props */}
+            {/* //* 📌Conditional Rendering */}
+            {/* <UserGreeting /> */}
+
+            {/* //* 📌Pass Method as props */}
             {/* <ParentComponent /> */}
 
             {/* //* 📌Binding Event Handlers */}

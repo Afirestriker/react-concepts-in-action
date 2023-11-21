@@ -213,10 +213,25 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
     * Approach 3 - Ternary Operator (?:)
     * Approach 4 - Short-circuit Operator (&&)
 
+* Lesson 17 - List Rendering
+  * File - **NameList.js**, **PersonList.js**, and **Person.js**
+  * Learned how to render a list of items (array items) using Array.map prototype method.
+  * Refractor the code for better structuring and recommened format in **PersonList.js and Person.js**
+
+* Lesson 18 - Lists and Keys
+  * File - **NameList.js**, **PersonList.js**, and **Person.js**
+  * A `key` is a prop necessary to include while rendering a list of item in react.
+  * A `key` is a special string attribute you need to include when creating lists of elements.
+    * It is used by react to uniquely identify and distinquish different item in the lists.
+  * Keys gives the elements a stable identity.
+  * Keys help React identify which items have changed, are added, or are removed.
+  * Help in efficient update of the user interface.
+  * ***NOTE: key is a special prop i.e. you cannot pass/ access the key prop in the child component.***
+
 <br/>
 
 **Q&A:**
-* Q1. How the react application runs. How the files are called and the components gets render on web page.
+* Q1. How the react application runs. How the files are called and the components gets render on web page?
   * Answer
     * The startup file structure is by default created on running the `npm create-react-app <project-name>` command.
     * On running the `npm start` command, the file are call and run in the following sequence.
@@ -224,13 +239,17 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
       * 2nd - `src/ index.js`       -- index.js imports React, and render the `App component` on the div#root html element.
       * 3rd - `src/App.js`          -- App is the very first react component render on the web page when we run the React app.
 
-* Q2. Difference types of componens in react
+* Q2. Difference types of componens in react?
   * Answer
     * 1st - `Functional` Component.
     * 2nd - `Class` Component.
 
-* Q3. Difference between Named export and Default Export
+* Q3. Difference between Named export and Default Export?
   * Answer
     * `Default export` are the one that can be import using alias, i.e, any other name.
     * `Named export` are the one that should be import using their exact name.
 
+* Q4. Why do we need `key` prop?
+  * Answer
+    * The `key` prop helps react distinquish each item from the lists in order to identify which item in the list has changed, added, or removed and plays a crucial role in handling UI updates efficiently.
+    * Since react maintain a virtual tree to identify the changes in the UI and updates only the parts being changed, added, or removed.
