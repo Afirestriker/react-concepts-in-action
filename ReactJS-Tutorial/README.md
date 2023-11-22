@@ -228,10 +228,13 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
   * Help in efficient update of the user interface.
   * ***NOTE: key is a special prop i.e. you cannot pass/ access the key prop in the child component.***
 
+* Lesson 19 - Index as key anti-pattern
+  * File - **NameList.js**.
+  * [Q5. When to use index as a key while rendering list items in react?](#Q5)
 <br/>
 
 **Q&A:**
-* Q1. How the react application runs. How the files are called and the components gets render on web page?
+* #### Q1. How the react application runs. How the files are called and the components gets render on web page?
   * Answer
     * The startup file structure is by default created on running the `npm create-react-app <project-name>` command.
     * On running the `npm start` command, the file are call and run in the following sequence.
@@ -239,17 +242,25 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
       * 2nd - `src/ index.js`       -- index.js imports React, and render the `App component` on the div#root html element.
       * 3rd - `src/App.js`          -- App is the very first react component render on the web page when we run the React app.
 
-* Q2. Difference types of componens in react?
+* #### Q2. Difference types of componens in react?
   * Answer
     * 1st - `Functional` Component.
     * 2nd - `Class` Component.
 
-* Q3. Difference between Named export and Default Export?
+* #### Q3. Difference between Named export and Default Export?
   * Answer
     * `Default export` are the one that can be import using alias, i.e, any other name.
     * `Named export` are the one that should be import using their exact name.
 
-* Q4. Why do we need `key` prop?
+* #### Q4. Why do we need `key` prop?
   * Answer
     * The `key` prop helps react distinquish each item from the lists in order to identify which item in the list has changed, added, or removed and plays a crucial role in handling UI updates efficiently.
     * Since react maintain a virtual tree to identify the changes in the UI and updates only the parts being changed, added, or removed.
+
+* #### Q5. When to use index as a key while rendering list items in react?
+  * Answer
+    * As array index as a key is vulnerable to cause some bug as the code progress due to how react render components by comparing react-dom and the main-dom. You can though use index as key provided some certain conditions are met:
+      * 1. The items in your list do not have a unique id.
+      * 2. The list is a static list and will not change.
+      * 3. The list will never be sorted or filtered.
+    * ***Tip: If needed, you can use npm-package to create a unix index***
