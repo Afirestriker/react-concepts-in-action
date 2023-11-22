@@ -12,14 +12,20 @@ import ParentComponent from './components/ParentComponent';
 import UserGreeting from './components/UserGreeting';
 import NameList from './components/NameList';
 import PersonList from "./components/PersonList";
+import Stylesheet from "./components/Stylesheet";
+import InlineStyling from "./components/InlineStyling";
 
 function App() {
     return (
         <div className="App">
 
+            {/* //* 📌Styling in CSS */}
+            <Stylesheet primary={true} />
+            <InlineStyling />
+
             {/* //* 📌List Rendering */}
-            <PersonList />
-            <NameList />
+            {/* <PersonList /> */}
+            {/* <NameList /> */}
 
             {/* //* 📌Conditional Rendering */}
             {/* <UserGreeting /> */}

@@ -231,6 +231,22 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
 * Lesson 19 - Index as key anti-pattern
   * File - **NameList.js**.
   * [Q5. When to use index as a key while rendering list items in react?](#Q5)
+
+* Lesson 20 - Styling and CSS Basics
+  * File - **Stylesheet.js**, **myStyles.css**, **inlineStyle.js**
+  * 4 Different approach to styling using CSS in react
+    * 1. **CSS Stylesheets**
+      * Create a separate .css file and import in the Component file.
+      * Apply conditional className based on props value.
+      * Apply multiple className using backtick to concatenate variable and string.
+    * 2. **Inline Styling**
+      * In React inline style are not specified as a string, intead they are specified within object whose key's is the camelCase version of the CSS Stylename and the value is usually a string.
+    * 3. **CSS MOdules**
+      * CSS Module is a special file.
+      * The naming convention for css module file is that it must be suffix with `.module.css`.
+    * 4. **CSS in JS Libraries** (Styles Components)
+
+
 <br/>
 
 **Q&A:**
