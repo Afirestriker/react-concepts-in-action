@@ -233,7 +233,7 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
   * [Q5. When to use index as a key while rendering list items in react?](#Q5)
 
 * Lesson 20 - Styling and CSS Basics
-  * File - **Stylesheet.js**, **myStyles.css**, **inlineStyle.js**
+  * File - **Stylesheet.js**, **myStyles.css**, **InlineStyling.js**
   * 4 Different approach to styling using CSS in react
     * 1. **CSS Stylesheets**
       * Create a separate .css file and import in the Component file.
@@ -243,7 +243,10 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
       * In React inline style are not specified as a string, intead they are specified within object whose key's is the camelCase version of the CSS Stylename and the value is usually a string.
     * 3. **CSS MOdules**
       * CSS Module is a special file.
-      * The naming convention for css module file is that it must be suffix with `.module.css`.
+      * The file naming convention to be used for css module file i.e. suffix with `.module.css`.
+      * The major difference between regular stylesheet and CSS-Module:
+        * The regular stylesheet get auto apply to child components which may result in css conflict as the code grow bigger.
+        * On the other hand, the css-module is imported and work as an object which is available in the file where it it imported.
     * 4. **CSS in JS Libraries** (Styles Components)
 
 

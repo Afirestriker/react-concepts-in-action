@@ -14,14 +14,19 @@ import NameList from './components/NameList';
 import PersonList from "./components/PersonList";
 import Stylesheet from "./components/Stylesheet";
 import InlineStyling from "./components/InlineStyling";
+import './appStyles.css';
+import styles from './appStyles.module.css';
 
 function App() {
     return (
         <div className="App">
 
+
             {/* //* 📌Styling in CSS */}
-            <Stylesheet primary={true} />
-            <InlineStyling />
+            <h1 className='error'>Error</h1>
+            <h1 className={styles.success}>Success</h1>
+            {/* <Stylesheet primary={true} /> */}
+            {/* <InlineStyling /> */}
 
             {/* //* 📌List Rendering */}
             {/* <PersonList /> */}
