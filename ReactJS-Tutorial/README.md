@@ -249,6 +249,17 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
         * On the other hand, the css-module is imported and work as an object which is available in the file where it it imported.
     * 4. **CSS in JS Libraries** (Styles Components)
 
+* Lesson 21 - Basics of Form Handling
+  * File - **Form.js**
+  * In Regular HTML the form elements like input, select, textarea, and so on... are responsible on their own to handle the user's input and update the respective values.
+  * The form elements whose values is controlled by React is called a `Controlled Components`.
+    * In the controlled components the value of input field is set to the state property.
+    * And the on change event handler is added to update the state using the setState method.
+  * Their are basically three simple steps:
+    * 1. Create a form element.
+    * 2. Assign the state value to the form element's value attribute.
+    * 3. Assign the event listener to update the state.
+
 
 <br/>
 

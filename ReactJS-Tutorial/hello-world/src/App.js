@@ -16,15 +16,18 @@ import Stylesheet from "./components/Stylesheet";
 import InlineStyling from "./components/InlineStyling";
 import './appStyles.css';
 import styles from './appStyles.module.css';
+import Form from "./components/Form";
 
 function App() {
     return (
         <div className="App">
 
+            {/* //* 📌Basics of form handling */}
+            <Form />
 
             {/* //* 📌Styling in CSS */}
-            <h1 className='error'>Error</h1>
-            <h1 className={styles.success}>Success</h1>
+            {/* <h1 className='error'>Error</h1> */}
+            {/* <h1 className={styles.success}>Success</h1> */}
             {/* <Stylesheet primary={true} /> */}
             {/* <InlineStyling /> */}
 
