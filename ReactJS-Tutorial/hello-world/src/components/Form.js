@@ -52,6 +52,8 @@ class Form extends Component {
     }
 
     render() {
+        const {username, comments, topic} = this.state;
+
         return(
             <form onSubmit={this.handleFormSubmit}>
                 <div>
@@ -59,7 +61,7 @@ class Form extends Component {
                     <input
                         type="text"
                         name="username"
-                        value={this.state.username}
+                        value={username}
                         onChange={this.handleFormChange}
                         placeholder="Enter username"
                     />
@@ -68,14 +70,14 @@ class Form extends Component {
                     <label htmlFor="comments">Comments</label>
                     <textarea
                         name="comments"
-                        value={this.state.comments}
+                        value={comments}
                         onChange={this.handleFormChange}
                         placeholder="Enter comments">
                     </textarea>
                 </div>
                 <div>
                     <label htmlFor="topic">Topic</label>
-                    <select name="topic" value={this.state.topic} onChange={this.handleFormChange}>
+                    <select name="topic" value={topic} onChange={this.handleFormChange}>
                         <option value="react">React</option>
                         <option value="Angular">Angular</option>
                         <option value="Vue">Vue</option>
