@@ -260,6 +260,30 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
     * 2. Assign the state value to the form element's value attribute.
     * 3. Assign the event listener to update the state.
 
+* Lesson 22 - Component Lifecycle Methods
+  * A react component goes through difference stages during it lifecycle, which are basically some predefined method that we can modify.
+  * ***IMP NOTE:- This lifecycle methods are available for a class components and not on a functional components***
+  * A component lifecycle methods can be miningly classified into four phases and their respective method are according to the following conditions
+    * Mounting:- When an instance of a component is being created and inserted into the DOM.
+    * Updating:- When a component being re-rendered as a result of change to either its props or state.
+    * Unmounting:- When a component being removed from the DOM.
+    * Error Handling:- When there is an error during rendering, in a lifecycle method, or in the constructor of any child component.
+  1. **Mounting** phase has four methods:
+     * constructor
+     * static getDerivedStateFromProps
+     * render
+     * componentDidMount
+  2. **Updating** phase has five methods:
+     * static getDerivedStateFromProps
+     * shouldComponentUpdate
+     * render
+     * getSnapshotBeforeUpdate
+     * componentDidUpdate
+  3. **Unmounting** phase has only one method:
+     * componentWillUnmount
+  4. **Error Handling** phase has two methods:
+     * static getDerivedStateFromError
+     * componentDidCatch
 
 <br/>
 
