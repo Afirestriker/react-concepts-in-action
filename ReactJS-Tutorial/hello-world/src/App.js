@@ -17,13 +17,17 @@ import InlineStyling from "./components/InlineStyling";
 import './appStyles.css';
 import styles from './appStyles.module.css';
 import Form from "./components/Form";
+import LifeCycleA from "./components/LifecycleA";
 
 function App() {
     return (
         <div className="App">
 
+            {/* //* 📌Component lifecycle methods */}
+            <LifeCycleA />
+
             {/* //* 📌Basics of form handling */}
-            <Form />
+            {/* <Form /> */}
 
             {/* //* 📌Styling in CSS */}
             {/* <h1 className='error'>Error</h1> */}

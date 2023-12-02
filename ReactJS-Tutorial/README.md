@@ -263,7 +263,7 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
 * Lesson 22 - Component Lifecycle Methods
   * A react component goes through difference stages during it lifecycle, which are basically some predefined method that we can modify.
   * ***IMP NOTE:- This lifecycle methods are available for a class components and not on a functional components***
-  * A component lifecycle methods can be miningly classified into four phases and their respective method are according to the following conditions
+  * A component lifecycle methods can be miningly classified into four phases:-
     * Mounting:- When an instance of a component is being created and inserted into the DOM.
     * Updating:- When a component being re-rendered as a result of change to either its props or state.
     * Unmounting:- When a component being removed from the DOM.
@@ -285,6 +285,38 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
      * static getDerivedStateFromError
      * componentDidCatch
 
+* Lesson 23 - Component Mounting Lifecycle Methods
+  * File - **LifecycleA.js**
+  1. **constructor(props)** -
+     1. A special function that will get called whenever a new component is created.
+     2. Use for Initializing state. Binding the event handlers.
+     3. `super() / Super(props)` mandatory. Only after passing the props as a parameter to super() you can use `this.props` in current class component.
+     4. Unlike props, there's no need to pass the state. The constructor directly overwrite `this.state`.
+     5. What you shouldn't do is Causing Side Effect. Ex: Fetcing data from a end point (HTTP Request).
+  2. **static getDerivedStateFromProps(props, state)** -
+     1. React documentation classified this method as a rarely used life-cycle method.
+     2. This method is basically used when the state of the component depends on changes in props over time.
+        **For example:** You have a component and the initial state of that component depends on the props being passed.
+     3. Since this is static method you do not have access to the `this` keyword. So you can not use `this.state` instead you simply have to return the an object that represents the new state of the component.
+     4. What you shouldn't do is Causing Side Effect. Ex: Fetcing data from a end point (HTTP Request).
+  3. **render()** -
+     1. The render() method is the only must required method in a class component.
+     2. The redner() is simply for reading the props and state value and return the formatted JSX.
+     3. The render() methdo is also term as pure function, since for the given props and state values. It always return the same UI.
+     4. What you should not do here is to not chagne the state or interact with the DOM or make any Ajax calls.
+     5. In case if the render() method contains a child-component. Then that children components lifecycle methods are also executed. Right after the parent render() method.
+  4. **componentDidMount()** -
+     1. This method will be called only once in the whole life cycle of a given component and it invoked immediately after a component and all its children component have been render to the DOM.
+     2. This method is the perfect place to cause side effects. Ex: Interact with the DOM or perform any Ajax calls to load data.
+     3. componentDidMount() is a good place to perform initialization that requires DOM nodes and also load data by making network requests.
+  * **NOTE:** If you are having a children component. Then the sequence of call will be like:
+    * Step 1 - parentComponent Mount Method call till render()
+    * Step 2 - Inside render() method the children component will be invoked and its respective all mount method will be called.
+    * Step 3 - The step-2 will be repeated if there's are more children component either nested or at level one.
+    * Step 4 - Once all the children component are rendered and mounted. Then finally at the parent final mount method i.e,
+               componentDidMount() method will be invoked.
+
+
 <br/>
 
 **Q&A:**
@@ -298,8 +330,15 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
 
 * #### Q2. Difference types of componens in react?
   * Answer
-    * 1st - `Functional` Component.
-    * 2nd - `Class` Component.
+    * `Functional` Component.
+      * Functional component are very much similar to functions in javascript and require the use of Hooks in order to manage state.
+      * Unlike the Class component we do not make use of `this` keyword to read, update, and manage state/ props.
+      * Unlike the Class component do have the component lifecycle methods.
+    * `Class` Component.
+      * Class components make use of ES6 class and has a component lifecycle methods that represents how a component is mount, update, and unmount.
+      * Class component is create by extending the `React.Component` class.
+      * Require the use of `this` keyword in order to work with state and props.
+      * Has one mandatory method called `render()` where we read the sate and props and return the formatted JSX.
 
 * #### Q3. Difference between Named export and Default Export?
   * Answer
@@ -313,8 +352,18 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
 
 * #### Q5. When to use index as a key while rendering list items in react?
   * Answer
-    * As array index as a key is vulnerable to cause some bug as the code progress due to how react render components by comparing react-dom and the main-dom. You can though use index as key provided some certain conditions are met:
-      * 1. The items in your list do not have a unique id.
-      * 2. The list is a static list and will not change.
-      * 3. The list will never be sorted or filtered.
+    * Using Array index as a key is vulnerable to cause some bug as the code progress due to how react render components by comparing react-virtual-dom and the main-dom. You can though use index as key provided some certain conditions are met:
+      1. The items in your list do not have a unique id.
+      2. The list is a static list and will not change.
+      3. The list will never be sorted or filtered.
     * ***Tip: If needed, you can use npm-package to create a unix index***
+
+* #### Q6. Difference between importing React, and { Component, etc... }.
+  * Answer
+    * Curly braces are used to import single(specific) property, whereas the word without braces is import entire object form that file.
+    * ```js
+      import React, { Component } from 'react';
+      ```
+      * Here the word **React** represents to import entire object from the file 'react'.
+      * **{ Component }** means we specify to import the particular property from the file.
+
