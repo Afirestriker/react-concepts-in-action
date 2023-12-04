@@ -13,6 +13,12 @@ class LifecycleB extends Component {
         return null; // must return null or object to set update state object
     }
 
+    shouldComponentUpdate() {
+        console.log("LifecycleB shouldComponentUpdate");
+        // return false;
+        return true; // if returns false - the component will not update and the update lifecycle will stop.
+    }
+
     render() {
         console.log("LifecycleB render");
         return (<div>LifecycleB - Hello Mike</div>);
@@ -20,6 +26,15 @@ class LifecycleB extends Component {
 
     componentDidMount() {
         console.log("LifecycleB componentDidMount");
+    }
+
+    getSnapshotBeforeUpdate(prevProps, prevState) {
+        console.log("LifecycleB getSnapshotBeforeUpdate");
+        return null;
+    }
+
+    componentDidUpdate() {
+        console.log("LifecycleB componentDidUpdate");
     }
 }
 

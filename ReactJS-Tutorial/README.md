@@ -267,14 +267,14 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
     * Mounting:- When an instance of a component is being created and inserted into the DOM.
     * Updating:- When a component being re-rendered as a result of change to either its props or state.
     * Unmounting:- When a component being removed from the DOM.
-    * Error Handling:- When there is an error during rendering, in a lifecycle method, or in the constructor of any child component.
+    * Error Handling:- When there is an error *during rendering*, *in a lifecycle method*, or *in the constructor* of any child component.
   1. **Mounting** phase has four methods:
      * constructor
-     * static getDerivedStateFromProps
+     * `static` getDerivedStateFromProps
      * render
      * componentDidMount
   2. **Updating** phase has five methods:
-     * static getDerivedStateFromProps
+     * `static` getDerivedStateFromProps
      * shouldComponentUpdate
      * render
      * getSnapshotBeforeUpdate
@@ -292,17 +292,17 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
      2. Use for Initializing state. Binding the event handlers.
      3. `super() / Super(props)` mandatory. Only after passing the props as a parameter to super() you can use `this.props` in current class component.
      4. Unlike props, there's no need to pass the state. The constructor directly overwrite `this.state`.
-     5. What you shouldn't do is Causing Side Effect. Ex: Fetcing data from a end point (HTTP Request).
+     5. What you shouldn't do is Causing Side Effect. Ex: Fetching data from a end point (HTTP Request).
   2. **static getDerivedStateFromProps(props, state)** -
      1. React documentation classified this method as a rarely used life-cycle method.
      2. This method is basically used when the state of the component depends on changes in props over time.
         **For example:** You have a component and the initial state of that component depends on the props being passed.
-     3. Since this is static method you do not have access to the `this` keyword. So you can not use `this.state` instead you simply have to return the an object that represents the new state of the component.
-     4. What you shouldn't do is Causing Side Effect. Ex: Fetcing data from a end point (HTTP Request).
+     3. Since this is static method you do not have access to the `this` keyword, you can not use `this.state`. Instead you simply have to return a **null** or an **object** that represents the new state of the component.
+     4. What you shouldn't do is Causing Side Effect. Ex: Fetching data from a end point (HTTP Request).
   3. **render()** -
      1. The render() method is the only must required method in a class component.
      2. The redner() is simply for reading the props and state value and return the formatted JSX.
-     3. The render() methdo is also term as pure function, since for the given props and state values. It always return the same UI.
+     3. The render() method is also term as pure function, since for the given props and state values. It always return the same UI.
      4. What you should not do here is to not chagne the state or interact with the DOM or make any Ajax calls.
      5. In case if the render() method contains a child-component. Then that children components lifecycle methods are also executed. Right after the parent render() method.
   4. **componentDidMount()** -
@@ -316,6 +316,43 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
     * Step 4 - Once all the children component are rendered and mounted. Then finally at the parent final mount method i.e,
                componentDidMount() method will be invoked.
 
+* Lesson 24 - Updating Lifecycle Methods
+  1. **static getDerivedStateFromProps(props, state)** -
+     1. React documentation classified this method as a rarely used life-cycle method.
+     2. This method is called every time a component is re-rendered.
+     3. This method is basically used when the state of the component depends on changes in props over time.
+        **For example:** You have a component and the initial state of that component depends on the props being passed.
+     4. Since this is static method you do not have access to the `this` keyword, you can not use `this.state`. Instead you simply have to return a **null** or an **object** that represents the new state of the component.
+     5. What you shouldn't do is Causing Side Effect. Ex: Fetching data from a end point (HTTP Request).
+  2. **shouldComponentUpdate()** -
+     1. This method is classified as the rarely used method as per the react document.
+     2. It received the updated Props and State.
+     3. The purpose of this method is clear from its name. It dictates if at all the component should re-render or not.
+     4. By default all class components will re-render whenever the props they received or their state changes.
+     5. By returning `false` the default behaviour can be prevented.
+     6. One practical use of this method is to check the updated props and state with existing props and state to return
+        either `true` or `false`.
+     7. This method is basically for performance optimization.
+     8. What you shouldn't do is Causing Side Effect. Ex: Fetching data from a end point (HTTP Request).
+  3. **render()** -
+     1. The thrid method in updating lifecycle is the all too familiar render() method. (Read desc above 👆).
+  4. **getSnapshotBeforeUpdate(prevProps, prevState)** -
+     1. This method is also classified the rarely used method as per the react documentation.
+     2. This method is called right before the changes from the virtual DOM are to be reflected in the real DOM.
+     3. This method accept the `prevProps` and `propsState` as its parameters.
+     4. Useful to capture some information from the DOM.
+        * *For Example: Read the user Scroll position. And after the update maintain that scroll position by performing some calculation.*
+     5. This method will either return `null` or `value`.
+     6. The returned value will be passed as the third parameter to the next lifecycle method.
+     7. In Summary - **The getSnapshotBeforeUpdate(prevProps, prevState) used to read the current DOM state and return's a value or null.**
+  5. **componentDidUpdate(prevProps, prevState, snapshot)** -
+     1. This method is called after the render is finished in the re-render cycles.
+     2. This method is guaranteed to be called only once in the re-render lifecycle. So what you can do is cause side effect.
+     3. Can cause side effect in this method. I.e. you can make Ajax calls.
+     4. It is recommend/ good practice to compare the prevProps/ state with current props/ state in order to decide whether to make the Ajax call or not. Thus preventing any unwanted requested.
+     5. Summary - **The componentDidUpdate(prevProps, prevState, snapshot) is called only once after the component is re-rendered and is suitable to make Ajax calls based on the previous and current props/ state value.**
+  * Out of all the five methods of the component updating lfecycle:
+    * The render() and componentDidMount() are the more commonly used methods during the update lifecycle. The remaining three method exist for special cases and should be used sparingly.
 
 <br/>
 
