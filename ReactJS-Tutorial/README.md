@@ -286,7 +286,7 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
      * componentDidCatch
 
 * Lesson 23 - Component Mounting Lifecycle Methods
-  * File - **LifecycleA.js**
+  * File - **LifecycleA.js**, **LifecycleB.js**
   1. **constructor(props)** -
      1. A special function that will get called whenever a new component is created.
      2. Use for Initializing state. Binding the event handlers.
@@ -370,6 +370,18 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
   * This phase has two methods and the execution start whenever there is an error either during rendering, in a lifecycle method, or in the constructor of any child component.
   1. **static getDrivedStateFromError()**
   2. **componentDidCatch()**
+
+* Lesson 25 - Fragements
+  * File - **FragmentDemo.js**, **Table.js**, **Columns.js**
+  * In JSX it is not possible to return two node. To do so you have to wrapped the nodes into a &lg;div&gt;. But this creates a div between the parent and child component. At sometime you may just need to add a nodes and not the wrapper node. This is possible using `React.Fragment`.
+  * In practical example where the fragment can be used.
+    * Two separate component **Table** and **Columns**.
+    * In the Table component &lt;tr&gt; tag we are importing a children Columns component and when the JSX of Columns component is render. If should be the direct child nodes of the Table's &lt;tr&gt; node.
+  * There's a bit different between `<React.Fragment> ... </React.Fragment>` and `<> ... </>`
+    * For Example: if you want to render a list of items using fragment. You will have to use the **`<React.Fragment>`**.
+      * Since, in the **`<React.Fragment>`** you can add the **key** attribute.
+      * Whereas in the **`<> </>`** fragment you can't use the key attribute.
+
 
 <br/>
 

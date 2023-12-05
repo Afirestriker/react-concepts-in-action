@@ -18,13 +18,19 @@ import './appStyles.css';
 import styles from './appStyles.module.css';
 import Form from "./components/Form";
 import LifeCycleA from "./components/LifecycleA";
+import FragmentDemo from "./components/FragmentDemo";
+import Table from "./components/Table";
 
 function App() {
     return (
         <div className="App">
 
+            {/* //* 📌Fragments */}
+            <Table />
+            {/* <FragmentDemo /> */}
+
             {/* //* 📌Component lifecycle methods */}
-            <LifeCycleA />
+            {/* <LifeCycleA /> */}
 
             {/* //* 📌Basics of form handling */}
             {/* <Form /> */}
