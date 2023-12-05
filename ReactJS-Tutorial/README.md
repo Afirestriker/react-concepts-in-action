@@ -382,6 +382,10 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
       * Since, in the **`<React.Fragment>`** you can add the **key** attribute.
       * Whereas in the **`<> </>`** fragment you can't use the key attribute.
 
+* Lesson 26 - Pure Components
+  * File - PureComp.js
+  * _
+
 
 <br/>
 
@@ -433,3 +437,9 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
       * Here the word **React** represents to import entire object from the file 'react'.
       * **{ Component }** means we specify to import the particular property from the file.
 
+* #### Q7. What the difference between `<React.Fragment>...</React.Fragment` and `<>...</>`?
+  * Answer
+    * Well both create a fragment i.e. empty node to wrap multiple and return multiple node while writting JSX.
+    * The major difference comes when you want to add attributes in the fragment node.
+    * For example: As per react classification. It it necessary to add a `key` attributes while rendering a list of items. For performance in comparing react virtual DOM and brower DOM.
+    * In the `<React.Fragment>` you can add the attribute **key** whereas in the empty fragment `<>` it is not possible.
