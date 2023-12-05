@@ -354,6 +354,23 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
   * Out of all the five methods of the component updating lfecycle:
     * The render() and componentDidMount() are the more commonly used methods during the update lifecycle. The remaining three method exist for special cases and should be used sparingly.
 
+* Lesson 24 Continue - Unmounting Phase Method
+  * This phase has only one method.
+  1. **componentWillUnmount()** -
+     1. This method is invoked immediately before a components is unmounted and destroyed.
+     2. In this method you can perform some cleanup tasks like:
+        * Cancelling any network request.
+        * Removing event handlers.
+        * Cancelling any subscriptions
+        * Invalidating timers from setTimer() or setInterval().
+     3. What you shouldn't do in this method is calling setState() method. Simply because the component is never re-render after it is unmounted.
+     4. Summary - **In the componentWillUnmount() method, the component will unmount, perform necessary clean up and don't call setState().**
+
+* Lesson 24 Continue - Error Handling Phase Methods
+  * This phase has two methods and the execution start whenever there is an error either during rendering, in a lifecycle method, or in the constructor of any child component.
+  1. **static getDrivedStateFromError()**
+  2. **componentDidCatch()**
+
 <br/>
 
 **Q&A:**
