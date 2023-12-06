@@ -20,13 +20,19 @@ import Form from "./components/Form";
 import LifeCycleA from "./components/LifecycleA";
 import FragmentDemo from "./components/FragmentDemo";
 import Table from "./components/Table";
+import PureComp from "./components/PureComp";
+import ParentComp from "./components/ParentComp";
 
 function App() {
     return (
         <div className="App">
 
+            {/* //* 📌PureComponent */}
+            <ParentComp />
+            {/* <PureComp /> */}
+
             {/* //* 📌Fragments */}
-            <Table />
+            {/* <Table /> */}
             {/* <FragmentDemo /> */}
 
             {/* //* 📌Component lifecycle methods */}
@@ -75,6 +81,12 @@ function App() {
             {/* <Welcome name="Diana" heroName="Wonder Woman"/> */}
 
             {/* <Hello /> */}
+
+            <div desc="This div is in App component" style={{"margin-top": "20px", "color": "lightcoral"}}>
+                NOTE: In console logs you might see each log messages appearing twice.
+                This is because the <strong>&lt;App /&gt;</strong> component is wrapped by
+                the <strong>&lt;React.StrictMode /&gt;</strong> compoent in the <strong>index.js</strong> file.
+            </div>
         </div>
     );
 }

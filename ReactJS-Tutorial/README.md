@@ -380,11 +380,14 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
   * There's a bit different between `<React.Fragment> ... </React.Fragment>` and `<> ... </>`
     * For Example: if you want to render a list of items using fragment. You will have to use the **`<React.Fragment>`**.
       * Since, in the **`<React.Fragment>`** you can add the **key** attribute.
-      * Whereas in the **`<> </>`** fragment you can't use the key attribute.
+      * Whereas in the **`<>...</>`** fragment you can't use the key attribute.
 
 * Lesson 26 - Pure Components
-  * File - PureComp.js
-  * _
+  * File - **PureComp.js**, **RegularComp.js**, **ParentComp.js**
+  * Using `React.PureComponent` class.
+  * In Q&A Section below -
+    * Q8. What is the difference between the `Component` and `PureComponent` class? When should we use one over the other.
+    * Q9. What is Shallow props and State Comparison?
 
 
 <br/>
@@ -443,3 +446,40 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
     * The major difference comes when you want to add attributes in the fragment node.
     * For example: As per react classification. It it necessary to add a `key` attributes while rendering a list of items. For performance in comparing react virtual DOM and brower DOM.
     * In the `<React.Fragment>` you can add the attribute **key** whereas in the empty fragment `<>` it is not possible.
+
+* #### Q8. What is the difference between the `Component` and `PureComponent` class? When should we use one over the other.
+  * Answer Q8.1
+    * **Regular Component** - A regular component does not implement the `shouldComponentUpdate()` method. It always return true by default.
+    * **Pure Component** - A pure component on the other hand implements `shouldComponentUpdate()` method with a shallow props and state comparision.
+    * *Description*:
+      * The PureComponent class shouldComponentUpdate() method does the Shallow Comparison (SC) i.e.
+        * **SC of prevState with currentState**  // `return true/ false`
+        * **SC of prevProps with currentProps**  // `return true/ false`
+      * And if there's there a difference in either, the shouldComponentUpdate() returns true and the component is re-rendered.
+
+  * Answer Q8.2 (Why do we use PureComponent)
+    * The `PureComponent` prevent un-necessary renders which helps in the performance boost in certain scenarios. For example rendering a list of 50+ items and by not re-rendering them when it is not required you are going to have a good performance boost.
+    * **`The key point to keep in mind`**: You should not mutate objects/ arrays in props or state.
+      * For example: You need to add a new item to the list dont mutate it by pushing the item into the list. The reference to the array never changes and pure component only check for that, the component will not re-render even if there's a difference. Always return a new object or array when dealing with pure components.
+
+* ### Q9. What is Shallow props and State Comparison?
+  * Answer
+    * Shallow Comparison (SC) with respective of Primitive-Types and Complex-Type.
+    * **Primitive Types**
+      * A SC between `var a` and `var b` returns true if `a` and `b` have the same value and are of the same type.
+      ```js
+        const a = 'Kate';
+        const b = 'Kate';
+
+        const ab_eq = (a === b); // return true;
+      ```
+    * **Complex Types**
+      * For complex type `var a` and `var b`. A SC return true if `a` and `b` reference the exact same object.
+      ```js
+        const a = [1, 2, 3]; // {x: 1, y: 2};
+        const b = [1, 2, 3]; // {x: 1, y: 2};
+        const c = a;
+
+        const ab_eq = (a === b) // return false
+        const ac_eq = (a === c) // return true
+      ```

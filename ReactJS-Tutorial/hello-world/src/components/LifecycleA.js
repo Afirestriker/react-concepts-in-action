@@ -42,12 +42,6 @@ class LifecycleA extends Component {
                 <div>LifecycleA - Hello {this.state.name}</div>
                 <button onClick={this.updateName}>Update state name from "Kate" To "Jack" - Open console for update lifecycle method call log</button>
                 <LifecycleB />
-
-                <div style={{"margin-top": "20px", "color": "lightcoral"}}>
-                    NOTE: In console logs you might see each log messages appearing twice.
-                    This is because the <strong>&lt;App /&gt;</strong> component is wrapped by
-                    the <strong>&lt;React.StrictMode /&gt;</strong> compoent in the <strong>index.js</strong> file.
-                </div>
             </>
         )
     }
