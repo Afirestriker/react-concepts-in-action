@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import PureComp from './PureComp';
 import RegularComp from './RegularComp';
 
-class ParentComp extends Component {
+// class ParentComp extends Component
+class ParentComp extends React.PureComponent {
     constructor(props) {
         super(props);
         this.state = {
@@ -25,7 +26,7 @@ class ParentComp extends Component {
     }
 
     render() {
-        console.log("*************************Parent Component Re-Render******************************")
+        console.log("*************************Parent Component Render******************************")
         return(
             <div>
                 Parent Component

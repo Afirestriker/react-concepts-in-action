@@ -82,7 +82,7 @@ function App() {
 
             {/* <Hello /> */}
 
-            <div desc="This div is in App component" style={{"margin-top": "20px", "color": "lightcoral"}}>
+            <div desc="This div is in App component" style={{"marginTop": "20px", "color": "lightcoral"}}>
                 NOTE: In console logs you might see each log messages appearing twice.
                 This is because the <strong>&lt;App /&gt;</strong> component is wrapped by
                 the <strong>&lt;React.StrictMode /&gt;</strong> compoent in the <strong>index.js</strong> file.

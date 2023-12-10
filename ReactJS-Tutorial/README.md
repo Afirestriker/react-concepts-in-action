@@ -388,6 +388,12 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
   * In Q&A Section below -
     * Q8. What is the difference between the `Component` and `PureComponent` class? When should we use one over the other.
     * Q9. What is Shallow props and State Comparison?
+  * Summary -
+    * We can create a component by extending the PureComponent class.
+    * A PureComponent implements the *shouldComponentUpdate* lifecycle method by performing a shallow comparison on the props and state of the component.
+    * If there is no difference, the componet is not re-render - **Performance Boost**
+    * If is a good idea to ensure that all the children components are also pure to avoid undexpected behaviour.
+    * When using PureComponent. Never mutate the state. Always return a new object that reflects the new state.
 
 
 <br/>
