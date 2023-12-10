@@ -395,6 +395,11 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
     * If is a good idea to ensure that all the children components are also pure to avoid undexpected behaviour.
     * When using PureComponent. Never mutate the state. Always return a new object that reflects the new state.
 
+* Lesson 27 - Memo
+  * File - **ParentComp.js**, **MemoComp.js**
+  * PureComponent though only works with the class based components.
+  * To achieve the same in the functional component. The `React.Memo` is used.
+  * What PureComponent do to the class based components. Memo do to the functional components.
 
 <br/>
 

@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import PureComp from './PureComp';
 import RegularComp from './RegularComp';
+import MemoComp from './MemoComp';
 
-// class ParentComp extends Component
-class ParentComp extends React.PureComponent {
+// class ParentComp extends React.PureComponent {
+class ParentComp extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -14,15 +15,15 @@ class ParentComp extends React.PureComponent {
     }
 
     componentDidMount() {
-        this.setState({
-            name: "Kate"
-        });
+        this.intervalId = setInterval(() => {
+            this.setState({
+                name: "Kate"
+            });
+        }, 2000);
 
-        // this.intervalId = setInterval(() => {
-        //     this.setState({
-        //         name: "Kate"
-        //     });
-        // }, 2000);
+        // this.setState({
+        //     name: "Kate"
+        // });
     }
 
     render() {
@@ -30,8 +31,9 @@ class ParentComp extends React.PureComponent {
         return(
             <div>
                 Parent Component
-                <PureComp name={this.state.name} />
-                <RegularComp name={this.state.name} />
+                <MemoComp name={this.state.name} />
+                {/* <PureComp name={this.state.name} /> */}
+                {/* <RegularComp name={this.state.name} /> */}
             </div>
         )
     }
