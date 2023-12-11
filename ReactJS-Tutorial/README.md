@@ -401,6 +401,17 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
   * To achieve the same in the functional component. The `React.Memo` is used.
   * What PureComponent do to the class based components. Memo do to the functional components.
 
+* Lesson 28 - Refs
+  * File - **RefsDemo.js**
+  * Refs make it possible to access DOM node directly within React.
+  * It is common to create Refs within the constructor so that it can be reference throughout the class.
+  * Possible Usescases:
+    * Usecase 1: To autofocus in input field on form load.
+    * Usecase 2: To fetch the input value.
+  * Approach 1: Using React.createRef()
+  * Approach 2: Using call back ref
+
+
 <br/>
 
 **Q&A:**
