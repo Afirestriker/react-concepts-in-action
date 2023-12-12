@@ -406,11 +406,15 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
   * Refs make it possible to access DOM node directly within React.
   * It is common to create Refs within the constructor so that it can be reference throughout the class.
   * Possible Usescases:
-    * Usecase 1: To autofocus in input field on form load.
+    * Usecase 1: To autofocus an input field on form load.
     * Usecase 2: To fetch the input value.
   * Approach 1: Using React.createRef()
   * Approach 2: Using call back ref
 
+* Lesson 29 - Refs with Class Components
+  * File - **FocusInput.js**, **InputRef.js**
+  * The refs can be attached to the class component. But not to the functional components.
+  * Create a input ref and a class ref. Make the child component input field focus from parent component click handler.
 
 <br/>
 
