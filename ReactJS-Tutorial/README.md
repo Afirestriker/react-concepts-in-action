@@ -416,6 +416,14 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
   * The refs can be attached to the class component. But not to the functional components.
   * Create a input ref and a class ref. Make the child component input field focus from parent component click handler.
 
+* Lesson 30 - Forwarding Refs
+  * File - **FRInput.js**, **FRParentInput.js**
+  * Refs forwarding is a technique for automatically passing a `refs` through a component to one of its children.
+  * Use React.ForwardRef().
+  * Normally it is not possible to pass the ref attribute as props to the child component.
+  * To pass ref to child component. It is needed to use React.ForwardRef().
+
+
 <br/>
 
 **Q&A:**
