@@ -423,6 +423,15 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
   * Normally it is not possible to pass the ref attribute as props to the child component.
   * To pass ref to child component. It is needed to use React.ForwardRef().
 
+* Lesson 31 - Portals
+  * File - **index.html**, **PortalDemo.js**, **App.js**
+  * React portals provide a way to render to render children into a DOM node that exist outside the DOM heirarchy of the  parent component i.e `div#app <App />`.
+  * Example:
+    * For far we having one DOM element in our HTML that we were mounting the React application into.
+    * Go to Public > index.html > div #root
+    * Go to Public > index.js > Mounted the `<App />` component onto the `div#root` element using `ReactDOM.render()`
+    * So far in the React DOM tree, everty single React components are mounted over the div#root element.
+  * The React Portals provide the ability to break out of the DOM tree, so to render the component onto a DOM node which is not under the div#root element using the `ReactDom.createPortal()` method.
 
 <br/>
 
@@ -517,3 +526,19 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
         const ab_eq = (a === b) // return false
         const ac_eq = (a === c) // return true
       ```
+
+* ### Q10. What are portals? When to you portals.
+  * Answer:
+    * Portals is a way to mount the React component onto a DOM note other than parent component.
+    * The ReactDom.createPortal() is a method that lets you render some children into a different part of the DOM.
+    * Syntax: `ReactDom.createPortal(children, domNode, key?)`
+    * Usage:
+      1. Rendering to a different part of the DOM.
+      2. Rendering a popup Modal or Tooltip.
+      3. Rendering React components into non-React server morkup.
+      4. Rendering React components into non-React DOM nodes.
+
+* ### Q11. Behavior of event when using Portals?
+  * Anwer:
+    * Events from portals propagate according to the React tree rather than the DOM tree. For example, if you click inside a portal, and the portal is wrapped in `<div onClick>`, that onClick handler will fire. If this causes issues, either stop the event propagation from inside the portal, or move the portal itself up in the React tree.
+
