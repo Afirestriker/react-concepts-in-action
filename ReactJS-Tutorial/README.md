@@ -367,7 +367,7 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
      4. Summary - **In the componentWillUnmount() method, the component will unmount, perform necessary clean up and don't call setState().**
 
 * Lesson 24 Continue - Error Handling Phase Methods
-  * This phase has two methods and the execution start whenever there is an error either during rendering, in a lifecycle method, or in the constructor of any child component.
+  * This phase has two methods and the execution start whenever there is an error either during rendering, in a lifecycle method, or in the constructor of any child component. [Lesson 32 - Error Boundary](Lesson-32-Error-Boundary)
   1. **static getDrivedStateFromError()**
   2. **componentDidCatch()**
 
@@ -432,6 +432,17 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
     * Go to Public > index.js > Mounted the `<App />` component onto the `div#root` element using `ReactDOM.render()`
     * So far in the React DOM tree, everty single React components are mounted over the div#root element.
   * The React Portals provide the ability to break out of the DOM tree, so to render the component onto a DOM node which is not under the div#root element using the `ReactDom.createPortal()` method.
+
+* Lesson 32 - Error Boundary
+  * File - **Hero.js**
+  * [Q12. What is Error Boundary?](Q12)
+  * Erro boundary catch errors during rendering, in lifecycle method, and in the constructors of the whole tree below them. However they **do not catch error inside event handlers**.
+  * If you are using an event hander for example a **click** handler, you will have to use a normal try-catch statment to catch the error.
+  * Summary:
+    * Erro boundaries are React components that catch JavaScript error in their child component tree, log those errors, and display a fall-back UI.
+    * A class component becomes an Error Boundary by defining either or both of getDerivedStateFromError() and componentDidCatch() error lifecycle methods.
+    * The placement of the Error Boundary also matters as it controls if the entire app should have the fall-back UI or just the component causing the problem.
+    * Provide a way to gracefully handle error in application code.
 
 <br/>
 
@@ -542,3 +553,7 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
   * Anwer:
     * Events from portals propagate according to the React tree rather than the DOM tree. For example, if you click inside a portal, and the portal is wrapped in `<div onClick>`, that onClick handler will fire. If this causes issues, either stop the event propagation from inside the portal, or move the portal itself up in the React tree.
 
+* ### Q12. What is Error Boundary?
+  * Answer:
+    * A class component that implements either one or both of the lifecycle methods **getDerivedStateFromError** or **componentDidCatch** becomes an **error boundary**.
+    * The static method *getDerivedStateFromError* is used to render a fallback UI after an error is thrown and the *componentDidCatch* method is used to log the error information.
