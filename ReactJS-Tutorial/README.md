@@ -75,7 +75,7 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
   * Props in Functional component
     * How to pass component `attributes` and recieve as props properties.
     * How to pass component `children` i.e, dynamic html content inside component and recieving it using the reserved children property of the props object.
-  * Props in Classs component
+  * Props in Class component
     * Unlike functional component. To use props in React Class component we need to make use of `this` keyword.
     * For Example: ```this.props.name / this.props.heroName / this.props.children ```
   * **Props are immutable i.e. you cannot changes the props property values**
@@ -92,7 +92,7 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
 
 * Lesson 11 - setState()
   * `this.setState()` method is used to change/ update the state value.
-  * `this.setState()` is an `async` method.
+  * `this.setState()` is an **`async`** method.
   * We can though update the `this.state.count` value without using this.setState(). But it will not re-render the UI.
   * This is the main reason why we use `this.setState()`.
   * ```js
@@ -444,6 +444,22 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
     * The placement of the Error Boundary also matters as it controls if the entire app should have the fall-back UI or just the component causing the problem.
     * Provide a way to gracefully handle error in application code.
 
+* Lesson 33 - Higher Order Components
+  * File - **ClickCounter.js**, **HoverCounter.js**, **withCounter.js**, **App.js**
+  * Par 1 - Why there is a need for HOCs
+    * **To share common functionality between components without repeating the code**
+    * Suppose you create a counter program that increment the count on a button click. Whcih makes the client happy.
+    * Later the client request the same functionality with a heading showing count value which increment on Hover.
+    * Later the client request the same functionality with a input element and increment count on keyup.
+    * Slowly you realize that the same code logic has been getting repeated. It could have been possible by initalizing state in parent component with a handler functionality and passing it as props. But **Lifting the state is not a great idea**, assuming the components are not the direct child of the parent and are scatter throughout the program.
+    * In such scenarios there comes a need of the concept named **HOCs**.
+  * Part 2 - What excatly is the HOCs, How to create a HOCs to reuse code.
+    * [Q13. What is Hight Order Components (HOC)? What is an HOC Pattern?](Q13)
+    * HOC - A pattern where a function takes a component as an agrument and return a new component.
+    * Implement a basic HOCs for to reuse counter functionality for clickCounter and HoverCounter by wrapping the component in withCounter.
+  * Part 3 - Some details on HOCs
+
+
 <br/>
 
 **Q&A:**
@@ -452,7 +468,7 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
     * The startup file structure is by default created on running the `npm create-react-app <project-name>` command.
     * On running the `npm start` command, the file are call and run in the following sequence.
       * 1st - `public/ index.html`  -- This is the only HTML file in the whole react-app. It contains the `div#root` html element.
-      * 2nd - `src/ index.js`       -- index.js imports React, and render the `App component` on the div#root html element.
+      * 2nd - `src/ index.js`       -- index.js imports React, and render the `<App />` component on the **div#root** html element.
       * 3rd - `src/App.js`          -- App is the very first react component render on the web page when we run the React app.
 
 * #### Q2. Difference types of componens in react?
@@ -461,6 +477,7 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
       * Functional component are very much similar to functions in javascript and require the use of Hooks in order to manage state.
       * Unlike the Class component we do not make use of `this` keyword to read, update, and manage state/ props.
       * Unlike the Class component do have the component lifecycle methods.
+      * Unlike the Class component do not require `this` binding.
     * `Class` Component.
       * Class components make use of ES6 class and has a component lifecycle methods that represents how a component is mount, update, and unmount.
       * Class component is create by extending the `React.Component` class.
@@ -487,12 +504,12 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
 
 * #### Q6. Difference between importing React, and { Component, etc... }.
   * Answer
-    * Curly braces are used to import single(specific) property, whereas the word without braces is import entire object form that file.
+    * Curly braces are used to import single (specific) property, whereas the word without braces is import entire object form that file.
     * ```js
       import React, { Component } from 'react';
       ```
       * Here the word **React** represents to import entire object from the file 'react'.
-      * **{ Component }** means we specify to import the particular property from the file.
+      * **{ Component }** means to import the particular property from the file 'react'.
 
 * #### Q7. What the difference between `<React.Fragment>...</React.Fragment` and `<>...</>`?
   * Answer
@@ -514,7 +531,7 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
   * Answer Q8.2 (Why do we use PureComponent)
     * The `PureComponent` prevent un-necessary renders which helps in the performance boost in certain scenarios. For example rendering a list of 50+ items and by not re-rendering them when it is not required you are going to have a good performance boost.
     * **`The key point to keep in mind`**: You should not mutate objects/ arrays in props or state.
-      * For example: You need to add a new item to the list dont mutate it by pushing the item into the list. The reference to the array never changes and pure component only check for that, the component will not re-render even if there's a difference. Always return a new object or array when dealing with pure components.
+      * For example: You need to add a new item to the list, don't mutate it by pushing the item into the list. The reference to the array never changes and pure component only check for that, the component will not re-render even if there's a difference. Always return a new object or array when dealing with pure components.
 
 * ### Q9. What is Shallow props and State Comparison?
   * Answer
@@ -557,3 +574,18 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
   * Answer:
     * A class component that implements either one or both of the lifecycle methods **getDerivedStateFromError** or **componentDidCatch** becomes an **error boundary**.
     * The static method *getDerivedStateFromError* is used to render a fallback UI after an error is thrown and the *componentDidCatch* method is used to log the error information.
+
+* ### Q13. What is Hight Order Components (HOC)? What is an HOC Pattern?
+  * Answer:
+    * A pattern where a function takes a component as an agrument and return a new component.
+    * Typically HOC add additional functionaly or data to the originalComponent.
+    * Syntax:
+    ```js
+    const NewComponent = higherOrderComponent( originalComponent );
+    const EnhanceComponent = higherOrderComponent( originalComponent );
+
+    // non technical point of view
+    const IronMan = withSuit( TonyStark );
+    // TonyStart is the original component,
+    // withSuit() is the function that will enhanced TonyStart and return IronMan which is the enhanced component.
+    ```
