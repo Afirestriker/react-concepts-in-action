@@ -444,7 +444,7 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
     * The placement of the Error Boundary also matters as it controls if the entire app should have the fall-back UI or just the component causing the problem.
     * Provide a way to gracefully handle error in application code.
 
-* Lesson 33 - Higher Order Components
+* Lesson 33, 34, 35 - Higher Order Components
   * File - **ClickCounter.js**, **HoverCounter.js**, **withCounter.js**, **App.js**
   * Par 1 - Why there is a need for HOCs
     * **To share common functionality between components without repeating the code**
@@ -457,8 +457,9 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
     * [Q13. What is Hight Order Components (HOC)? What is an HOC Pattern?](Q13)
     * HOC - A pattern where a function takes a component as an agrument and return a new component.
     * Implement a basic HOCs for to reuse counter functionality for clickCounter and HoverCounter by wrapping the component in withCounter.
-  * Part 3 - Some details on HOCs
-
+  * Part 3 - Discussion on HOCs
+    * 1. Passing down the props. The prop is passed to the HOC and not to the component whcih is wrapped.
+    * 2. Pass parameter to the HOC function.
 
 <br/>
 

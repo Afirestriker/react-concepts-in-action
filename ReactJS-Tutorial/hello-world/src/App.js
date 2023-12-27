@@ -35,7 +35,7 @@ function App() {
     return (
         <div className="App">
             {/* //* 📌Hight Order Component */}
-            <ClickCounter />
+            <ClickCounter name="Jack" />
             <HoverCounter />
 
             {/* //* 📌Error Boundary */}
