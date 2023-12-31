@@ -1,4 +1,6 @@
 {
     "files.trimTrailingWhitespace": true,
-    "editor.mouseWheelZoom": true
+    "editor.mouseWheelZoom": true,
+    "files.defaultLanguage": "${activeEditorLanguage}",
+    "editor.snippetSuggestions": "inline"
 }

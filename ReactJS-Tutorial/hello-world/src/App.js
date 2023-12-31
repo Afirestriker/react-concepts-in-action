@@ -30,13 +30,30 @@ import Hero from "./components/Hero";
 import ErrorBoundary from "./components/ErrorBoundar";
 import ClickCounter from './components/ClickCounter';
 import HoverCounter from "./components/HoverCounter";
+import ClickCounterTwo from "./components/ClickCounterTwo";
+import HoverCounterTwo from "./components/HoverCounterTwo";
+import User from "./components/User";
+import CounterRenderPops from "./components/CounterRenderPops";
 
 function App() {
     return (
         <div className="App">
+            {/* //* 📌Render Props */}
+            <CounterRenderPops render={(count, incrementCount) => (
+                <ClickCounterTwo count={count} incrementCount={incrementCount} />
+            )} />
+
+            <CounterRenderPops render={(count, incrementCount) => (
+                <HoverCounterTwo count={count} incrementCount={incrementCount} />
+            )} />
+
+            {/* <ClickCounterTwo /> */}
+            {/* <HoverCounterTwo /> */}
+            {/* <User render={(isLoggedIn) => (isLoggedIn) ? "Ash" : "Guest"} /> */}
+
             {/* //* 📌Hight Order Component */}
-            <ClickCounter name="Jack" />
-            <HoverCounter />
+            {/* <ClickCounter name="Jack" /> */}
+            {/* <HoverCounter /> */}
 
             {/* //* 📌Error Boundary */}
             {/* <ErrorBoundary>
@@ -117,7 +134,7 @@ function App() {
             <div desc="This div is in App component" style={{"marginTop": "20px", "color": "lightcoral"}}>
                 NOTE: In console logs you might see each log messages appearing twice.
                 This is because the <strong>&lt;App /&gt;</strong> component is wrapped by
-                the <strong>&lt;React.StrictMode /&gt;</strong> compoent in the <strong>index.js</strong> file.
+                the <strong>&lt;React.StrictMode /&gt;</strong> component in the <strong>index.js</strong> file.
             </div>
         </div>
     );

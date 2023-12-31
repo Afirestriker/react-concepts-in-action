@@ -461,6 +461,16 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
     * 1. Passing down the props. The prop is passed to the HOC and not to the component whcih is wrapped.
     * 2. Pass parameter to the HOC function.
 
+* Lesson 36 - Render Props
+  * File - **User.js**, **ClickCounterTwo.js**, **HoverCounterTwo.js**, **CounterRenderPops.js**, **App.js**
+  * Another pattern for sharing code between react components.
+  * Why need Render Props?
+  * What the Render Props Pattern is?
+  * How to implement Render Props?
+  * The term `render props` refers to a technique for **sharing code** between React components using a **props whose value is a function.**
+  * PS: Not necessary to use the props name as `render` it is just an convention.
+
+
 <br/>
 
 **Q&A:**
