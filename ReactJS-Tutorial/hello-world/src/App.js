@@ -34,18 +34,26 @@ import ClickCounterTwo from "./components/ClickCounterTwo";
 import HoverCounterTwo from "./components/HoverCounterTwo";
 import User from "./components/User";
 import CounterRenderPops from "./components/CounterRenderPops";
+import ComponentA from "./components/ComponentA";
+import { UserProvider } from "./components/UserContext";
 
 function App() {
     return (
         <div className="App">
-            {/* //* 📌Render Props */}
-            <CounterRenderPops render={(count, incrementCount) => (
-                <ClickCounterTwo count={count} incrementCount={incrementCount} />
-            )} />
+            {/* //* 📌React Context */}
+            <UserProvider value="Mike">
+                <ComponentA />
+            </UserProvider>
 
-            <CounterRenderPops render={(count, incrementCount) => (
+
+            {/* //* 📌Render Props */}
+            {/* <CounterRenderPops render={(count, incrementCount) => (
+                <ClickCounterTwo count={count} incrementCount={incrementCount} />
+            )} /> */}
+
+            {/* <CounterRenderPops render={(count, incrementCount) => (
                 <HoverCounterTwo count={count} incrementCount={incrementCount} />
-            )} />
+            )} /> */}
 
             {/* <ClickCounterTwo /> */}
             {/* <HoverCounterTwo /> */}
@@ -131,11 +139,11 @@ function App() {
 
             {/* <Hello /> */}
 
-            <div desc="This div is in App component" style={{"marginTop": "20px", "color": "lightcoral"}}>
+            {/* <div desc="This div is in App component" style={{"marginTop": "20px", "color": "lightcoral"}}>
                 NOTE: In console logs you might see each log messages appearing twice.
                 This is because the <strong>&lt;App /&gt;</strong> component is wrapped by
                 the <strong>&lt;React.StrictMode /&gt;</strong> component in the <strong>index.js</strong> file.
-            </div>
+            </div> */}
         </div>
     );
 }
