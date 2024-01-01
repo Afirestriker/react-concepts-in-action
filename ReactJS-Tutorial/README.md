@@ -470,7 +470,7 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
   * The term `render props` refers to a technique for **sharing code** between React components using a **props whose value is a function.**
   * PS: Not necessary to use the props name as `render` it is just an convention.
 
-* Lesson 38 - Context API
+* Lesson 38, 39 - Context API
   * FIle - **UserContext.js**, **ComponentA.js**, **ComponentB.js**, **ComponentC.js**, **App.js**
   * Context provides a way to pass data through the component tree without having to pass down manually at every level.
   * 1. Create the context. File **UserContext.js**
