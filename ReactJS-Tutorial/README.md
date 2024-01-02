@@ -477,6 +477,13 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
   * 2. Provide a context value. File **App.js**
   * 3. Consume the context value. File **ComponentC.js**
 
+* Lesson 41 - HTTP and React
+  * Create a new project - **react-http**
+  * React is a library for creating interactive UI and does not have any in-build method for HTTP.
+  * Use a library called **`axios`** for working with API.
+  * Make use of [Json Placeholder](https://jsonplaceholder.typicode.com) which provides **Free Fake API for testing and prototyping.**
+
+
 <br/>
 
 **Q&A:**
@@ -493,7 +500,7 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
     * `Functional` Component.
       * Functional component are very much similar to functions in javascript and require the use of Hooks in order to manage state.
       * Unlike the Class component we do not make use of `this` keyword to read, update, and manage state/ props.
-      * Unlike the Class component do have the component lifecycle methods.
+      * Unlike the Class component do not have the component lifecycle methods.
       * Unlike the Class component do not require `this` binding.
     * `Class` Component.
       * Class components make use of ES6 class and has a component lifecycle methods that represents how a component is mount, update, and unmount.
@@ -521,7 +528,7 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
 
 * #### Q6. Difference between importing React, and { Component, etc... }.
   * Answer
-    * Curly braces are used to import single (specific) property, whereas the word without braces is import entire object form that file.
+    * Curly braces are used to import single (specific) property, whereas the word without braces import's an entire object form that file.
     * ```js
       import React, { Component } from 'react';
       ```
@@ -530,7 +537,7 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
 
 * #### Q7. What the difference between `<React.Fragment>...</React.Fragment` and `<>...</>`?
   * Answer
-    * Well both create a fragment i.e. empty node to wrap multiple and return multiple node while writting JSX.
+    * Well both create a fragment i.e. empty node to wrap and return multiple node while writting JSX.
     * The major difference comes when you want to add attributes in the fragment node.
     * For example: As per react classification. It it necessary to add a `key` attributes while rendering a list of items. For performance in comparing react virtual DOM and brower DOM.
     * In the `<React.Fragment>` you can add the attribute **key** whereas in the empty fragment `<>` it is not possible.
