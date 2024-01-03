@@ -487,6 +487,10 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
   * Install **`axios`** library.
   * Make a get request to a Json-Placeholder Fake API using **`axios.get()`** method.
 
+* Lesson 43 - HTTP Post Request
+  * Install **`axios`** library.
+  * Make a post request to a Json-Placeholder Fake API using axios method.
+
 <br/>
 
 **Q&A:**
