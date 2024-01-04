@@ -484,10 +484,12 @@ This tutorial is designed to teach you the basics of React, a JavaScript library
   * Make use of [Json Placeholder](https://jsonplaceholder.typicode.com) which provides **Free Fake API for testing and prototyping.**
 
 * Lesson 42 - HTTP Get Request
+  * Project - **react-http**
   * Install **`axios`** library.
   * Make a get request to a Json-Placeholder Fake API using **`axios.get()`** method.
 
 * Lesson 43 - HTTP Post Request
+  * Project - **react-http**
   * Install **`axios`** library.
   * Make a post request to a Json-Placeholder Fake API using axios method.
 
