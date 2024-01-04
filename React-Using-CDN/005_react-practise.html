@@ -10,7 +10,7 @@
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
         <!-- 
-          - React compoenent contain html in JSX format 
+          - React component contain html in JSX format 
           - The type text/jsx let babel know which script to compile from jsx to javascript 
           -->
         <script type="text/jsx">
@@ -25,18 +25,18 @@
                 return (
                     <div>
                         <h1> {props.title} </h1>
-                        {/* using curly braces we can write javascript inside jsx */}
+                        {/* using curly braces we can write javascript inside JSX */}
                     </div>
                 );
             }
             
             /**
              * Uses object destructring to directly use the parameter
-             * instead of using props.param
+             *   instead of using props.param.
              * The empty element <> used here is called fragment,
-             * Fragment helps to render UI without add one more element
-             *     and directly adding the componenet inside the calling component
-             *     i.e., parent component.
+             * Fragment helps to render UI without inside the current parent node 
+             *   instead of creating a sub node
+             *   i.e adding the componenet inside the parent component node
              */
             function Header({ context }) {
                 return (
