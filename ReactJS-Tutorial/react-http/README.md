@@ -1,6 +1,6 @@
 ## React Tutorial - React and HTTP
 
-This tutorial is designed to teach you how to make an HTTP request like Get, Post, Put, Delte in React, a JavaScript library for building user interfaces.
+This tutorial is designed to teach you how to make an HTTP request like Get, Post, Put, Delete in React, a JavaScript library for building user interfaces.
 
 **Steps to create React App:**
 1. Install Node.js and npm.
