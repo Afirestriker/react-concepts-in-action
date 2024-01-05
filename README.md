@@ -59,3 +59,4 @@ const [varName, setVarName] = React.useState({num1:25, num2:50});
 
 # Conclusion
 React is a powerful JavaScript library that allows developers to build user interfaces in a declarative way. With React, developers can create reusable components, manage state, and easily translate JSX code to JavaScript. It is widely used in web development and is supported by a large community of developers.
+
