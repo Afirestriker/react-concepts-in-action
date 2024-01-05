@@ -2,12 +2,22 @@
 
 This tutorial is designed to teach you how to make an HTTP request like Get, Post, Put, Delte in React, a JavaScript library for building user interfaces.
 
-**Installation:**
+**Steps to create React App:**
 1. Install Node.js and npm.
 2. Create a new directory for your project.
 3. Navigate to the project directory and run the following command:
-   1. `npm create-react-app <project-name>`
+   1. `npx create-react-app <project-name>`
    2. `npm start` OR `npm run start`
+
+
+**Steps to run existing React App:**
+1. Download and install **Node.js** and **npm**
+2. Download and install **Git**
+3. Clone the repository. Use the `git clone` command, followed by the GitHub repository URL.
+4. Navigate to the project directory. Use the command `cd <project-name>`
+5. Install dependencies. Use the command `npm install`
+6. Start the development server. Use the command `npm start`
+7. Access the application. Typically the URL is **http://localhost:3000/**
 
 
 **Tutorial:**
