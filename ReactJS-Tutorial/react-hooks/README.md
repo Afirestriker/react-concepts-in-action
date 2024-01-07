@@ -31,7 +31,7 @@ This tutorial is designed to teach you the Hooks in React, a JavaScript library 
   * Hooks are a new feature in React 16.8.
   * Hooks allow you to use React features without having to write a class. For example to use state you have to use Class Component
     but with the introduction to Hooks you can use State in Functional Components.
-  * Hooks are JavaScript functions that let you "hook into" React features like state and lifecycle methods.
+  * Hooks are special functions that let you "hook into" React features like state and lifecycle methods.
   * You can use hooks in any functional component.
   * There are three main reasons for hooks:
     1. **To avoid the confusion with the this keyword in JavaScript.**
@@ -40,6 +40,31 @@ This tutorial is designed to teach you the Hooks in React, a JavaScript library 
        * With hooks, you can write reusable functions that contain stateful logic. This can make your code cleaner and easier to maintain.
     3. **To improve the organization of code within a component.**
        * Hooks allow you to split components into smaller, more focused functions. This can make your code easier to understand and debug.
+
+* Lesson 2 - useState Hook
+  * File - **ClassCounter.js**, **HookCounter.js**
+  * `useState()` is a hook that let you add `state` into a functional component. useState is a named export.
+  * `useState()` being a function,
+    * Accept a **parameter** which is the `initial value` of the state property.
+    * **returns** the `current value` of the state property and a `method` that is capable of updating that state property
+  * Basic example of how to use a state hook in React.
+    * Step 1 - Import useState.
+    * Step 2 - Call useState() passing in a default value.
+    * Step 3 - Assign the return pair of values to variables using array destructuring. For example
+    * Step 4 - Use them while rendering the JSX.
+    ```js
+      const [count, setCount] = useState(0);
+      // The variable `count` - will always contains the current state value.
+      // `setCount` will accept an argument and set count values to that argument.
+    ```
+  * NOTE:
+    * The default/ initial value of useState is never use on Re-renders.
+
+```
+Rules of Hooks:
+  Only Call Hooks at the Top Level. Don't call Hooks inside loops, conditions, or nested functions.
+  Only Call Hooks from React Functions. Make sure to call them wihtin React functional component and not just any regular JavaScript function.
+```
 
 
 <br/>
