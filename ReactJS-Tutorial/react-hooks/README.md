@@ -42,7 +42,8 @@ This tutorial is designed to teach you the Hooks in React, a JavaScript library 
        * Hooks allow you to split components into smaller, more focused functions. This can make your code easier to understand and debug.
 
 * Lesson 2 - useState Hook
-  * File - **ClassCounter.js**, **HookCounter.js**
+  * Project: **state-hook**
+  * File: **ClassCounter.js**, **HookCounter.js**
   * `useState()` is a hook that let you add `state` into a functional component. useState is a named export.
   * `useState()` being a function,
     * Accept a **parameter** which is the `initial value` of the state property.
@@ -65,10 +66,6 @@ Rules of Hooks:
   Only Call Hooks at the Top Level. Don't call Hooks inside loops, conditions, or nested functions.
   Only Call Hooks from React Functions. Make sure to call them wihtin React functional component and not just any regular JavaScript function.
 ```
-
-* Lesson 3 - useState with previous state
-  * File -
-  * -
 
 <br/>
 
