@@ -71,7 +71,8 @@ Rules of Hooks:
   * File: **HookCounterTwo.js**
   * Change state value base on previous value.
   * Essential because, when multiple `setCount()` is executed for the same `count` value. Then to save performance React group the setCount() execution into one.
-    In such case the count is only incremented once. For example using forLoop
+    In such case the count is only incremented once. For example when using for Loop and updating state without prevState value.
+  * Changing state value without noting down the previous state value, is vulnarable to bug.
 
 <br/>
 
