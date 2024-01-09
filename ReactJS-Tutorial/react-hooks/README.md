@@ -74,6 +74,8 @@ Rules of Hooks:
     In such case the count is only incremented once. For example when using for Loop and updating state without prevState value.
   * Changing state value without noting down the previous state value, is vulnarable to bug.
 
+* Lesson 4 - useState with Object
+  * File: **HookCounterThree.js**
 <br/>
 
 
