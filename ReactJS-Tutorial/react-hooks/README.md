@@ -81,7 +81,7 @@ Rules of Hooks:
   * Use the JavaScript `spread` operator to merge and then update the state object using useState setter function.
 
 * Lesson 5 - useState with Array
-  * File: **HookCounterFour.js**
+  * File: **HookCounterFour.js**, **HookCounterFive.js**
 
 
 <br/>
