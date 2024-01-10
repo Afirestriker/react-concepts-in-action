@@ -84,7 +84,22 @@ Rules of Hooks:
   * File: **HookCounterFour.js**, **HookCounterFive.js**
   * As learn in the lesson 4, the useState setter function doesn't merge and update or in the case of an array the setter function doesn't automatically append the item to the
     end of the list, we need to handle that manually using the spread operator.
+  * Follow this simple steps:
+    1. In case of an array, the argumetn to the setter function will be an array [].
+    2. Spread the existing items (array).
+    3. Push the new item / an object.
 
+* Summarise:
+  - The useState hook allows you to add state to functional components.
+  - To use the useState hook, you call it inside a functional component. This creates a single piece of state for the component.
+  - In classes, the state is always an object. With the useState hook, the state doen't have to be an object.
+  - The state can be an object, an array, a number, a boolean, or a string.
+  - The useState hook returns an array with 2 elements:
+    - The first element is the current value of the state and,
+    - The second element is a state setter function to update the state.
+  - When you call the setter function with a new value, the component will re-render.
+  - If the new state value depends on the previous state value, you can pass a function to the setter function. This setter function will receive the previous state as an argument.
+  - When working with objects or arrays, it's important to spread the state variable before calling the setter function. This ensures that you don't overwrite the original state.
 
 <br/>
 
