@@ -82,6 +82,8 @@ Rules of Hooks:
 
 * Lesson 5 - useState with Array
   * File: **HookCounterFour.js**, **HookCounterFive.js**
+  * As learn in the lesson 4, the useState setter function doesn't merge and update or in the case of an array the setter function doesn't automatically append the item to the
+    end of the list, we need to handle that manually using the spread operator.
 
 
 <br/>
