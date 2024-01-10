@@ -80,6 +80,10 @@ Rules of Hooks:
   * You have to manually merge the object and pass to the setter function.
   * Use the JavaScript `spread` operator to merge and then update the state object using useState setter function.
 
+* Lesson 5 - useState with Array
+  * File: **HookCounterFour.js**
+
+
 <br/>
 
 
