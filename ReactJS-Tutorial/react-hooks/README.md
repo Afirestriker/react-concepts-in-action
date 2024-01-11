@@ -68,6 +68,7 @@ Rules of Hooks:
 ```
 
 * Lesson 3 - useState with previous state
+  * Project: **state-hook**
   * File: **HookCounterTwo.js**
   * Change state value base on previous value.
   * Essential because, when multiple `setCount()` is executed for the same `count` value. Then to save performance React group the setCount() execution into one.
@@ -75,12 +76,14 @@ Rules of Hooks:
   * Changing state value without noting down the previous state value, is vulnarable to bug.
 
 * Lesson 4 - useState with Object
+  * Project: **state-hook**
   * File: **HookCounterThree.js**
   * The setter function provided by `useState` does not automatically merge and update objects unlike the `setState` use in the class component.
   * You have to manually merge the object and pass to the setter function.
   * Use the JavaScript `spread` operator to merge and then update the state object using useState setter function.
 
 * Lesson 5 - useState with Array
+  * Project: **state-hook**
   * File: **HookCounterFour.js**, **HookCounterFive.js**
   * As learn in the lesson 4, the useState setter function doesn't merge and update or in the case of an array the setter function doesn't automatically append the item to the
     end of the list, we need to handle that manually using the spread operator.
@@ -89,7 +92,7 @@ Rules of Hooks:
     2. Spread the existing items (array).
     3. Push the new item / an object.
 
-* Summarise:
+* **Summarise on State-Hook:**
   - The useState hook allows you to add state to functional components.
   - To use the useState hook, you call it inside a functional component. This creates a single piece of state for the component.
   - In classes, the state is always an object. With the useState hook, the state doen't have to be an object.
@@ -100,6 +103,33 @@ Rules of Hooks:
   - When you call the setter function with a new value, the component will re-render.
   - If the new state value depends on the previous state value, you can pass a function to the setter function. This setter function will receive the previous state as an argument.
   - When working with objects or arrays, it's important to spread the state variable before calling the setter function. This ensures that you don't overwrite the original state.
+
+* Lesson 6 - Introduction to useEffect Hook
+  * Q. What is the `useEffect` hook and why is it useful?
+  * Q. How to use the `useEffect` hook to set the document title on initial render and subsequent updates.
+  * The `useEffect` hook help you perform **side effects** in **functional components**, that's too in a much better way compare to Class component.
+  * In the class components, the side effects is handled using the lifecycle methods like `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount`.
+  * ```javascript
+      compoentDidMount() {
+        document.title = `You clicked ${this.state.count} times.`;     // Repeated code
+        this.interval = setInterval(this.tick, 1000);                  // unrelated code in same block
+      }
+      componentDidUpdate() {
+        document.title = `You clicked ${this.state.count} times.`;     // Repeated code
+      }
+      componentWillUnmount() {
+        clearInterval(this.interval);
+      } ```
+  * Unlike class components, the `useEffect` hook helps you avoid code repeatation/ duplication, and grouping together the related code, instead of spliting between
+    different lifecycle methods.
+  * It is a close replacement for ***componentDidMount***, ***componentDidUpdate***, and ***componentWillUnmount***. I.e, the three lifecycle can be handle using
+    the useEffect hook.
+
+* Lesson 7 - useEffect after render
+  * Project: effect-hook
+  * File:
+  * Q. Understanding, how we can use the useEffect hook to set up the document title on initial render of the component, as well as on subsequent renders when the
+       component update's.
 
 <br/>
 
