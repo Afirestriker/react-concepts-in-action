@@ -105,8 +105,6 @@ Rules of Hooks:
   - When working with objects or arrays, it's important to spread the state variable before calling the setter function. This ensures that you don't overwrite the original state.
 
 * Lesson 6 - Introduction to useEffect Hook
-  * Q. What is the `useEffect` hook and why is it useful?
-  * Q. How to use the `useEffect` hook to set the document title on initial render and subsequent updates.
   * The `useEffect` hook help you perform **side effects** in **functional components**, that's too in a much better way compare to Class component.
   * In the class components, the side effects is handled using the lifecycle methods like `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount`.
   * ```javascript
@@ -126,15 +124,19 @@ Rules of Hooks:
     the useEffect hook.
 
 * Lesson 7 - useEffect after render
-  * Project: effect-hook
+  * Project: **effect-hook**
   * File:
-  * Q. Understanding, how we can use the useEffect hook to set up the document title on initial render of the component, as well as on subsequent renders when the
-       component update's.
 
 <br/>
 
 
 **Q&A:**
-* #### Q1.
-  * Asnwer
+* #### Q1. What is the `useEffect` hook and why is it useful?
+  * Asnwer - Lesson 6
+
+* #### Q2. How to use the `useEffect` hook to set the document title on initial render and subsequent updates.
+  * Asnwer - Lesson 6
+
+* #### Q3. Understanding, how we can use the useEffect hook to set up the document title on initial render of the component, as well as on subsequent renders when the component update's.
+  * Asnwer - Lesson 7
 
