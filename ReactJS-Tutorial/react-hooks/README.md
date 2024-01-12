@@ -125,7 +125,7 @@ Rules of Hooks:
 
 * Lesson 7 - useEffect after render
   * Project: **effect-hook**
-  * File: **ClassCounterOne.js**
+  * File: **ClassCounterOne.js**, **HookCounterOne.js**
   * 1. Implement side-effect in Class component to update the document title on every subsequent render/ re-render of the component.
   * 2. Replace the same functionality in React Functional Component, using useEffect hook.
 
