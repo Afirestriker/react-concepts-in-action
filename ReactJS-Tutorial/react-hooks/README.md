@@ -152,6 +152,11 @@ Rules of Hooks:
     return that function from the function passed to useEffect first argument.
   * The clean code can be canceling subscriptions, async tasks, timers, or even removing event handlers as seen in the above example.
 
+* Lesson 11 - useEffect with incroeect dependency
+  * Project: **effect-hook**
+  * File: **IntervalClassCounter.js**
+
+
 ---
 **Summary on Hooks**
 * **Summarise State-Hook:**
