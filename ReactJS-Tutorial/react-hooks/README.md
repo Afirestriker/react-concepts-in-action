@@ -145,7 +145,7 @@ Rules of Hooks:
 
 * Lesson 10 - useEffect with cleanup
   * Project: **effect-hook**
-  * File:
+  * File: **MouseContainer.js**, **HookMouse.js**
   * How to mimic the componentWillUnmount with useEffect in functional component.
   * Create a container component for the HookMouse component. With a button to toggle the components visibility.
   * To clean up the code which can be canceling subscriptions, timers, or even removing event handlers.
