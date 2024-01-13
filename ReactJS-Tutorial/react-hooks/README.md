@@ -134,9 +134,9 @@ Rules of Hooks:
 * Lesson 9 - Run effects only once
   * Project: **effect-hook**
   * File: **ClassMouse.js**, **HookMouse.js**
-  * How to mimic componentDidMount with useEffect in functional component.
-  * Example 1: Run effect one in Class component using componentDidMount lifecycle method. (**classMouse.js**)
-  * Example 2: Implment the same using useEffect in functional component. (**HookMouse.js**)
+  * > How to mimic componentDidMount with useEffect in functional component.
+  * > Example 1: Run effect one in Class component using componentDidMount lifecycle method. (**classMouse.js**)
+  * > Example 2: Implment the same using useEffect in functional component. (**HookMouse.js**)
   * In order to run useEffect only once during, pass in the second argument an empty array [].
   * The empty array basically tells react, that this particular effect does not depend on any props or state, so there is just no reason
     for you to call this effects on re-renders.
@@ -146,10 +146,11 @@ Rules of Hooks:
 * Lesson 10 - useEffect with cleanup
   * Project: **effect-hook**
   * File: **MouseContainer.js**, **HookMouse.js**
-  * How to mimic the componentWillUnmount with useEffect in functional component.
-  * Create a container component for the HookMouse component. With a button to toggle the components visibility.
-  * To clean up the code which can be canceling subscriptions, timers, or even removing event handlers.
-  * This is a great way to ensure that your components are cleaned up properly and that you don't leak memory.
+  * > How to mimic the componentWillUnmount with useEffect in functional component.
+  * > Create a container component for the HookMouse component. With a button to toggle the components visibility.
+  * The point ot make note of here is, when you want to execute some component clean up code. You included in a function and
+    return that function from the function passed to useEffect first argument.
+  * The clean code can be canceling subscriptions, async tasks, timers, or even removing event handlers as seen in the above example.
 
 ---
 **Summary on Hooks**

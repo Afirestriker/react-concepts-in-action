@@ -13,6 +13,11 @@ const HookMouse = () => {
     useEffect(() => {
         console.log("useEffect called");
         window.addEventListener('mousemove', logMousePosition)
+
+        return () => { // clean up code handler that will be called on component unmount. Mimicing componentWillUnmount.
+            console.log("Component unmounting code");
+            window.removeEventListener('mousemove', logMousePosition);
+        }
     }, []); // pass second argument as an empty array to mimic componentDidMount. I.e, run the useEffect only once.
 
     return (
