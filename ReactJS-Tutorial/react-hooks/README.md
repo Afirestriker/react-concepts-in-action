@@ -124,6 +124,11 @@ Rules of Hooks:
     * Call it within the component.
     * Pass in the function which has to be executed after every render of that component.
 
+* Lesson 8 - Conditionalty run effects
+  * Project: **effect-hook**
+  * File: **ClassCounterOne.js**
+
+
 ---
 **Summary on Hooks**
 * **Summarise State-Hook:**

@@ -6,8 +6,8 @@ import HookCounterOne from "./components/HookCounterOne";
 function App() {
     return <div className="App">
         Effect-Hook
-        <HookCounterOne />
-        {/* <ClassCounterOne /> */}
+        {/* <HookCounterOne /> */}
+        <ClassCounterOne />
     </div>;
 }
 
