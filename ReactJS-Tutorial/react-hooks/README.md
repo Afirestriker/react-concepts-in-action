@@ -155,6 +155,9 @@ Rules of Hooks:
 * Lesson 11 - useEffect with incroeect dependency
   * Project: **effect-hook**
   * File: **IntervalClassCounter.js**
+  * > Highligting a common mistake, mostly made by beginner with useEffect.
+  * > Create a simple class counter, that automatically increment every second.
+    * > Class component implmenetation of an interval counter.
 
 
 ---
