@@ -26,6 +26,13 @@ This tutorial is designed to teach you the Hooks in React, a JavaScript library 
 7. Access the application. Typically the URL is **http://localhost:3000/**
 
 
+```
+Rules of Hooks:
+  Only Call Hooks at the Top Level. Don't call Hooks inside loops, conditions, or nested functions.
+  Only Call Hooks from React Functions. Make sure to call them wihtin React functional component and not just any regular JavaScript function.
+```
+
+
 **Tutorial:**
 * Lesson 1 - React Hoooks - Introduction
   * Hooks are a new feature in React 16.8.
@@ -61,12 +68,6 @@ This tutorial is designed to teach you the Hooks in React, a JavaScript library 
   * NOTE:
     * The default/ initial value of useState is never use on Re-renders.
 
-```
-Rules of Hooks:
-  Only Call Hooks at the Top Level. Don't call Hooks inside loops, conditions, or nested functions.
-  Only Call Hooks from React Functions. Make sure to call them wihtin React functional component and not just any regular JavaScript function.
-```
-
 * Lesson 3 - useState with previous state
   * Project: **state-hook**
   * File: **HookCounterTwo.js**
@@ -91,18 +92,6 @@ Rules of Hooks:
     1. In case of an array, the argumetn to the setter function will be an array [].
     2. Spread the existing items (array).
     3. Push the new item / an object.
-
-* **Summarise on State-Hook:**
-  - The useState hook allows you to add state to functional components.
-  - To use the useState hook, you call it inside a functional component. This creates a single piece of state for the component.
-  - In classes, the state is always an object. With the useState hook, the state doen't have to be an object.
-  - The state can be an object, an array, a number, a boolean, or a string.
-  - The useState hook returns an array with 2 elements:
-    - The first element is the current value of the state and,
-    - The second element is a state setter function to update the state.
-  - When you call the setter function with a new value, the component will re-render.
-  - If the new state value depends on the previous state value, you can pass a function to the setter function. This setter function will receive the previous state as an argument.
-  - When working with objects or arrays, it's important to spread the state variable before calling the setter function. This ensures that you don't overwrite the original state.
 
 * Lesson 6 - Introduction to useEffect Hook
   * `useEffect` is used for causing side effects in the functional component.
@@ -135,9 +124,23 @@ Rules of Hooks:
     * Call it within the component.
     * Pass in the function which has to be executed after every render of that component.
 
-<br/>
+---
+**Summary on Hooks**
+* **Summarise State-Hook:**
+  - Lesson 1 to 6.
+  - The useState hook allows you to add state to functional components.
+  - To use the useState hook, you call it inside a functional component. This creates a single piece of state for the component.
+  - In classes, the state is always an object. With the useState hook, the state doen't have to be an object.
+  - The state can be an object, an array, a number, a boolean, or a string.
+  - The useState hook returns an array with 2 elements:
+    - The first element is the current value of the state and,
+    - The second element is a state setter function to update the state.
+  - When you call the setter function with a new value, the component will re-render.
+  - If the new state value depends on the previous state value, you can pass a function to the setter function. This setter function will receive the previous state as an argument.
+  - When working with objects or arrays, it's important to spread the state variable before calling the setter function. This ensures that you don't overwrite the original state.
 
 
+---
 **Q&A:**
 * #### Q1. What is the `useEffect` hook and why is it useful?
 * #### Q2. How to use the `useEffect` hook to set the document title on initial render and subsequent updates.
