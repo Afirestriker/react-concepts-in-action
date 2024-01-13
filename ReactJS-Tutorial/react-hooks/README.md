@@ -143,6 +143,14 @@ Rules of Hooks:
   * So React just call this effect on initial render of the component, and forget about it, and thus mimic the componentDidMount.
   * **Summary: We can mimic the componentDidMount in useEffect by simply passing in an empty array as the second parameter to useEffect.**
 
+* Lesson 10 - useEffect with cleanup
+  * Project: **effect-hook**
+  * File:
+  * How to mimic the componentWillUnmount with useEffect in functional component.
+  * Create a container component for the HookMouse component. With a button to toggle the components visibility.
+  * To clean up the code which can be canceling subscriptions, timers, or even removing event handlers.
+  * This is a great way to ensure that your components are cleaned up properly and that you don't leak memory.
+
 ---
 **Summary on Hooks**
 * **Summarise State-Hook:**
