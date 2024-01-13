@@ -128,6 +128,8 @@ Rules of Hooks:
   * Project: **effect-hook**
   * File: **ClassCounterOne.js**, **HookCounterTwo.js**
   * In the Class Component, we required to implement the `if` condition check between prevState value and current state value to conditionaly run the effects.
+  * Unlike Class Component, In order to conditionaly run effects in `Functional Component`, specify the second parameter to `useEffect`.
+  * The second parameter is the array of values, that the effect depends on. If the values don't change between renders, the effect simply not run.
 
 
 ---
