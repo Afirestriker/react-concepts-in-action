@@ -126,7 +126,8 @@ Rules of Hooks:
 
 * Lesson 8 - Conditionalty run effects
   * Project: **effect-hook**
-  * File: **ClassCounterOne.js**
+  * File: **ClassCounterOne.js**, **HookCounterTwo.js**
+  * In the Class Component, we required to implement the `if` condition check between prevState value and current state value to conditionaly run the effects.
 
 
 ---
