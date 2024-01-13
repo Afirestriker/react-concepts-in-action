@@ -131,6 +131,9 @@ Rules of Hooks:
   * Unlike Class Component, In order to conditionaly run effects in `Functional Component`, specify the second parameter to `useEffect`.
   * The second parameter is the array of values, that the effect depends on. If the values don't change between renders, the effect simply not run.
 
+* Lesson 9 - Run effects only once
+  * Project: **effect-hook**
+  * File: **ClassMouse.js**
 
 ---
 **Summary on Hooks**
