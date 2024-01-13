@@ -134,6 +134,8 @@ Rules of Hooks:
 * Lesson 9 - Run effects only once
   * Project: **effect-hook**
   * File: **ClassMouse.js**
+  * How to mimic componentDidMount with useEffect in functional component.
+  * Example 1: Run effect one in Class component using componentDidMount lifecycle method. (**classMouse.js**)
 
 ---
 **Summary on Hooks**
