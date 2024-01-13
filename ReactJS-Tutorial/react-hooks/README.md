@@ -105,6 +105,7 @@ Rules of Hooks:
   - When working with objects or arrays, it's important to spread the state variable before calling the setter function. This ensures that you don't overwrite the original state.
 
 * Lesson 6 - Introduction to useEffect Hook
+  * `useEffect` is used for causing side effects in the functional component.
   * The `useEffect` hook help you perform **side effects** in **functional components**, that's too in a much better way compare to Class component.
   * In the class components, the side effects is handled using the lifecycle methods like `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount`.
   * ```javascript
@@ -128,17 +129,26 @@ Rules of Hooks:
   * File: **ClassCounterOne.js**, **HookCounterOne.js**
   * 1. Implement side-effect in Class component to update the document title on every subsequent render/ re-render of the component.
   * 2. Replace the same functionality in React Functional Component, using useEffect hook.
+  * 3. How does the useEffect works? [Q4](Q4)
+  * Steps:
+    * Import `useEffect` from `react`.
+    * Call it within the component.
+    * Pass in the function which has to be executed after every render of that component.
 
 <br/>
 
 
 **Q&A:**
 * #### Q1. What is the `useEffect` hook and why is it useful?
-  * Asnwer - Lesson 6
-
 * #### Q2. How to use the `useEffect` hook to set the document title on initial render and subsequent updates.
   * Asnwer - Lesson 6
 
 * #### Q3. Understanding, how we can use the useEffect hook to set up the document title on initial render of the component, as well as on subsequent renders when the component update's.
   * Asnwer - Lesson 7
 
+* ### 04. How does the useEffect hook works?
+  * Answer
+    * When we specify/ implement the useEffect. We are basically requesting react to execute the function that is pass as an argument to the useEffect,
+      everytime the component renders.
+    * useEffect runs after every render of the component.
+    * useEffect is placed inside the component, by doing this we can easily access the component `states` and `props` without having to write any additional code.
