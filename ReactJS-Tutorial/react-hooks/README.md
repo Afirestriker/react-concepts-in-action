@@ -128,7 +128,7 @@ Rules of Hooks:
   * Project: **effect-hook**
   * File: **ClassCounterOne.js**, **HookCounterTwo.js**
   * In the Class Component, we required to implement the `if` condition check between prevState value and current state value to conditionaly run the effects.
-  * Unlike Class Component, In order to conditionaly run effects in `Functional Component`, specify the second parameter to `useEffect`.
+  * Unlike Class Component, In order to conditionaly run effects in `Functional Component`, specify the second parameter (**dependency array**) to `useEffect`.
   * The second parameter is the array of values, that the effect depends on. If the values don't change between renders, the effect simply not run.
 
 * Lesson 9 - Run effects only once
@@ -137,6 +137,11 @@ Rules of Hooks:
   * How to mimic componentDidMount with useEffect in functional component.
   * Example 1: Run effect one in Class component using componentDidMount lifecycle method. (**classMouse.js**)
   * Example 2: Implment the same using useEffect in functional component. (**HookMouse.js**)
+  * In order to run useEffect only once during, pass in the second argument an empty array [].
+  * The empty array basically tells react, that this particular effect does not depend on any props or state, so there is just no reason
+    for you to call this effects on re-renders.
+  * So React just call this effect on initial render of the component, and forget about it, and thus mimic the componentDidMount.
+  * **Summary: We can mimic the componentDidMount in useEffect by simply passing in an empty array as the second parameter to useEffect.**
 
 ---
 **Summary on Hooks**
