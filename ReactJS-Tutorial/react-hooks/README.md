@@ -159,6 +159,14 @@ Rules of Hooks:
   * > Create a simple class counter, that automatically increment every second.
     * > Class component implmenetation of an interval counter.
     * > Implement the same using functional component and hooks.
+  * The point to make note of there is, when you pass an emtpy array [] as the second argument to useEffect, the useEffect runs only one and forget,
+    that's also mean, the useEffect do not monitor any update in props and state. Which may lead to unexpected behvior.
+  * For example: If the `setCount` could have been updated directly without prevState, then the value will be udpated only once, since React grouped
+    related setState. And that means component will no re-render and subsequent `tick` interval.
+  * To prevent such behevior,
+    1. Pass `count` to the useEffect array dependency, or
+    2. Make use of `prevState` to update the `setCount` which prevent the grouping of setCount and the component re-renders.
+    * **The second way is beter in this scenario, as this properly mimic the `componentDidMount`, `componentWillUnmount` as implemented in IntervalClassCounter.js**
 
 
 ---
