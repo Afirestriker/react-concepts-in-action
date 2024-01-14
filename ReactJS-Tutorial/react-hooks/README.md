@@ -167,7 +167,35 @@ Rules of Hooks:
     1. Pass `count` to the useEffect array dependency, or
     2. Make use of `prevState` to update the `setCount` which prevent the grouping of setCount and the component re-renders.
     * **The second way is beter in this scenario, as this properly mimic the `componentDidMount`, `componentWillUnmount` as implemented in IntervalClassCounter.js**
+  * **Additional handy tips:**
+    * Always think before specifying an empty dependency array.
+    * Sometime you might want to call an function within useEffect
+    * ```js
+      //...some functional component statements
+      function doSomething() {
+        console.log(someProps);
+      }
 
+      useEffect(() => {
+        doSomething(); // This seems clear but make developer easily make mistake and forget to track `someProps`
+        const interval = setInterval(tick, 1000);
+        return () => clearInterval(interval);
+      }, []);
+      //...some functional component statements
+      ```
+    * To prevent above mistake, the recommended is to group related code together:
+    * ```js
+      //...some functional component statements
+      useEffect(() => {
+        function doSomething() {
+          console.log(someProps);
+        }
+        doSomething();
+        const interval = setInterval(tick, 1000);
+        return () => clearInterval(interval);
+      }, [someProps]);
+      //...some functional component statements
+      ```
 
 ---
 **Summary on Hooks**
