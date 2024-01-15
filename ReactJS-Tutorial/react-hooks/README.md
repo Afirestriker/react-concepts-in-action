@@ -203,6 +203,10 @@ Rules of Hooks:
   * Make useEffect to fetch data from json-placeholder using axios module after component render.
   * Runs the useEffect only once by passign empty dependency array, as second argument to useEffect.
 
+* Lesson 13 - Fetching single post data with useEffect
+  * Project: **effect-hook**
+  * File: **SingleDataFetching**
+
 
 ---
 **Summary on Hooks**
