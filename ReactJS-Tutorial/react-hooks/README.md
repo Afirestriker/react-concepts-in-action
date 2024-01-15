@@ -152,7 +152,7 @@ Rules of Hooks:
     return that function from the function passed to useEffect first argument.
   * The clean code can be canceling subscriptions, async tasks, timers, or even removing event handlers as seen in the above example.
 
-* Lesson 11 - useEffect with incroeect dependency
+* Lesson 11 - useEffect with incorrect dependency
   * Project: **effect-hook**
   * File: **IntervalClassCounter.js**, **IntervalHookCounter.js**
   * > Highligting a common mistake, mostly made by beginner with useEffect.
@@ -202,6 +202,7 @@ Rules of Hooks:
   * File: **DataFetching.js**
   * Make useEffect to fetch data from json-placeholder using axios module after component render.
   * Runs the useEffect only once by passign empty dependency array, as second argument to useEffect.
+
 
 ---
 **Summary on Hooks**
