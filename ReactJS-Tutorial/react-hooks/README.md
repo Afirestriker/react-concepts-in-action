@@ -197,6 +197,10 @@ Rules of Hooks:
       //...some functional component statements
       ```
 
+* Lesson 12 - Fetching data with useEffect
+  * Project: **effect-hook**
+  * File:
+
 ---
 **Summary on Hooks**
 * **Summarise State-Hook:**
