@@ -199,7 +199,9 @@ Rules of Hooks:
 
 * Lesson 12 - Fetching data with useEffect
   * Project: **effect-hook**
-  * File:
+  * File: **DataFetching.js**
+  * Make useEffect to fetch data from json-placeholder using axios module after component render.
+  * Runs the useEffect only once by passign empty dependency array, as second argument to useEffect.
 
 ---
 **Summary on Hooks**
