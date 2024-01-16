@@ -205,7 +205,9 @@ Rules of Hooks:
 
 * Lesson 13 - Fetching single post data with useEffect
   * Project: **effect-hook**
-  * File: **SingleDataFetching**
+  * File: **SingleDataFetching.js**
+  1. Add an Input field for post ID, and fetch data on updating input field value.
+    * Pass an postId to array dependency to make useEffect run on change of the input value.
 
 
 ---
