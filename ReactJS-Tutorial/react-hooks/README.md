@@ -203,12 +203,14 @@ Rules of Hooks:
   * Make useEffect to fetch data from json-placeholder using axios module after component render.
   * Runs the useEffect only once by passign empty dependency array, as second argument to useEffect.
 
-* Lesson 13 - Fetching single post data with useEffect
+* Lesson 13 & 14 - Fetching single post data with useEffect
   * Project: **effect-hook**
   * File: **SingleDataFetching.js**
   1. Add an Input field for post ID, and fetch data on updating input field value.
     * Pass an postId to array dependency to make useEffect run on change of the input value.
-
+  2. Add an Button element and on click, fetch data based on input field value.
+    * Create new useState `updatedPostId` and update it to `postId` on button click.
+    * Pass `updatedPostId` to useEffect array dependency.
 
 ---
 **Summary on Hooks**
