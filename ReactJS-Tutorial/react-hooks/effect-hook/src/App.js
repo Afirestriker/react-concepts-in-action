@@ -13,7 +13,6 @@ import DataFetchingTwo from "./components/DataFetchingTwo";
 
 function App() {
     return <div className="App">
-        Effect-Hook
         <DataFetchingTwo />
         {/* <DataFetching /> */}
         {/* <IntervalHookCounter /> */}
