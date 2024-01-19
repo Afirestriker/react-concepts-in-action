@@ -227,6 +227,33 @@ Rules of Hooks:
   - If the new state value depends on the previous state value, you can pass a function to the setter function. This setter function will receive the previous state as an argument.
   - When working with objects or arrays, it's important to spread the state variable before calling the setter function. This ensures that you don't overwrite the original state.
 
+* **Summarise Effect-Hook:**
+  - Lesson 7 to 14
+  - useEffect is an hook used in react functional component.
+  - useEffect help to perform side effect in react functional component.
+  - It's helps mimic the **`componentDidMount`**, **`componentDidUpdate`**, **`componentWillUnmount`** lifecycle methods functionality in react functional component.
+    Through modifying the dependency array according to the need.
+  - For Example:
+    ```js
+      // Syntax: useEffect(callbackFunction, dependencyArray);
+
+      // 1. Mimic componentDidMount, componentDidUpdate and componentWillUnmount
+      useEffect(() => {
+        // some code statements
+
+        return callbackFunction // If provided with return then mimic componentWillUnmount
+      });
+
+      // 2. Mimic componentDidMount
+      useEffect(() => {
+        // some code statements
+      }, []);
+
+      // 3. Mimic componentDidMount and on specific state-hooks mimic the componentDidUpdate
+      useEffect(() => {
+        // some code statements
+      }, [stateVariable_1, stateVariable_n]);
+    ```
 
 ---
 **Q&A:**
