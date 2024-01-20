@@ -212,6 +212,13 @@ Rules of Hooks:
     * Create new useState `updatedPostId` and update it to `postId` on button click.
     * Pass `updatedPostId` to useEffect array dependency.
 
+* Lesson 15 - Introduction to useContext
+  * Context provides a way to pass data through the component tree without having to pass props down manually at every level.
+  * For Example:
+    * Consider a component tree as **A -> B -> C**.
+    * To pass a props to **Component-C**, you need to pass it through Component-A **TO** Component-B **TO** Component-C
+    * Context help in passing the props directly to the **Component-C**
+
 ---
 **Summary on Hooks**
 * **Summarise State-Hook:**
