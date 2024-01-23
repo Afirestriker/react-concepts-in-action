@@ -221,7 +221,7 @@ Rules of Hooks:
 
 * Lesson 16 - context in Class component
   * Project: **context-hook**
-  * File:
+  * File: **ComponentA.js**, **ComponentB.js**, **ComponentC.js**
 
 
 ---
