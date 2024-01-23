@@ -219,6 +219,11 @@ Rules of Hooks:
     * To pass a props to **Component-C**, you need to pass it through Component-A **TO** Component-B **TO** Component-C
     * Context help in passing the props directly to the **Component-C**
 
+* Lesson 16 - context in Class component
+  * Project: **context-hook**
+  * File:
+
+
 ---
 **Summary on Hooks**
 * **Summarise State-Hook:**
