@@ -1,8 +1,9 @@
 import React, { Component } from "react";
+import ComponentB from "./ComponentB";
 
 class ComponentA extends Component {
     render() {
-        return <div>ComponentA</div>;
+        return <ComponentB />;
     }
 }
 
