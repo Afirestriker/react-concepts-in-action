@@ -4,11 +4,14 @@ import "./App.css";
 import ComponentA from "./components/ComponentA";
 
 export const userContext = React.createContext();
+export const userTwoContext = React.createContext();
 
 function App() {
     return <div className="App">
         <userContext.Provider value={"Kate"}>
-            <ComponentA />
+            <userTwoContext.Provider value={"Jack"}>
+                <ComponentA />
+            </userTwoContext.Provider>
         </userContext.Provider>
     </div>;
 }
