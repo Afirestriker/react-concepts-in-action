@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import { userContext, userTwoContext } from "../App";
+import ComponentD from "./ComponentD";
 
 class ComponentC extends Component {
     render() {
-        return (
+        return <ComponentD />
+
+        /* return (
             <div>
                 <userContext.Consumer>
                     {user => {
@@ -17,7 +20,7 @@ class ComponentC extends Component {
                     }}
                 </userContext.Consumer>
             </div>
-        );
+        ); */
     }
 }
 
