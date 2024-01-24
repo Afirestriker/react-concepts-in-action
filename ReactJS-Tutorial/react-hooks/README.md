@@ -223,6 +223,11 @@ Rules of Hooks:
   * Project: **context-hook**
   * File: **ComponentA.js**, **ComponentB.js**, **ComponentC.js**
 
+* Lesson 17 - context in Functional component
+  * Project: **context-hook**
+  * File: **ComponentC.js**, **ComponentD.js**
+  * Import **`useContext`** hook from React to use context in React functional component.
+  * The `useContext` hook simplify the context consumer step as compare to the class component's `<context.consumer></context.consumer>`
 
 ---
 **Summary on Hooks**
