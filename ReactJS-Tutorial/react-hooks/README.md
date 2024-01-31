@@ -272,6 +272,13 @@ Rules of Hooks:
       }, [stateVariable_1, stateVariable_n]);
     ```
 
+* **Summarize useContext-Hook**
+  - `useContext` provides a way to share state between components without prop drilling. This simplifies component code and improves maintainability.
+  - Creating a context: Define a React context using the `React.createContext` function. This creates an object with two components: `Provider` and `Consumer`.
+  - Providing context: Wrap components that share the state with the Provider component. **Pass the state value as a prop to the Provider.**
+  - Consuming context: Use the `useContext` hook within any child component to access the shared state from the nearest Provider above it.
+
+
 ---
 **Q&A:**
 * #### Q1. What is the `useEffect` hook and why is it useful?
