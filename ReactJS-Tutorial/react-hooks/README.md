@@ -229,6 +229,21 @@ Rules of Hooks:
   * Import **`useContext`** hook from React to use context in React functional component.
   * The `useContext` hook simplify the context consumer step as compare to the class component's `<context.consumer></context.consumer>`
 
+* Lesson 18 - Introduction to useReducer Hook
+  * `useReducer` is a hook used for state management.
+  * useReducer is related to the reducer functions.
+  * Syntax:
+    ```js
+    // React useReducer
+    useReducer(reducer, initialState);
+
+    // JavaScript reducer
+    reducer(currentState, action);
+    ```
+  * **useReducer is basically changing the state in React component.**
+  * It is an alternative to useState.
+  * useState is built using useReducer. I.e. useReducer is more primitive hook compare to useState.
+
 ---
 **Summary on Hooks**
 * **Summarise State-Hook:**
@@ -278,6 +293,18 @@ Rules of Hooks:
   - Providing context: Wrap components that share the state with the Provider component. **Pass the state value as a prop to the Provider.**
   - Consuming context: Use the `useContext` hook within any child component to access the shared state from the nearest Provider above it.
 
+* **Summarize useRecuer-Hook**
+  * useRecucer is a hook that is used for state management in React.
+  * useRecucer is related to reducer functions.
+  * Syntax:
+    ```js
+    // React useReducer
+    useReducer(reducer, initialState);
+
+    // JavaScript reducer
+    reducer(currentState, action);
+    ```
+  * **useReducer is basically changing the state in React component.**
 
 ---
 **Q&A:**
