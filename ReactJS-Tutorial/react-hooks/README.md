@@ -235,10 +235,8 @@ Rules of Hooks:
   * Syntax:
     ```js
     // React useReducer
-    useReducer(reducer, initialState);
-
-    // JavaScript reducer
     reducer(currentState, action);
+    useReducer(reducer, initialState);
     ```
   * **useReducer is basically changing the state in React component.**
   * It is an alternative to useState.
@@ -299,10 +297,8 @@ Rules of Hooks:
   * Syntax:
     ```js
     // React useReducer
-    useReducer(reducer, initialState);
-
-    // JavaScript reducer
     reducer(currentState, action);
+    useReducer(reducer, initialState);
     ```
   * **useReducer is basically changing the state in React component.**
 
