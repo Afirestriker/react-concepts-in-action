@@ -1,4 +1,4 @@
-# React
+# React 
 React is a JavaScript library that allows developers to build dynamic and intetractive user interfaces using a declarative approach.
 
 ## Declarative v Imperative Programming Approach
