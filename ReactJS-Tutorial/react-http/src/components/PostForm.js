@@ -25,8 +25,7 @@ class PostForm extends Component {
     submitHandler = (eve) => {
         eve.preventDefault();
 
-        axios
-            .post("https://jsonplaceholder.typicode.com/posts", this.state)
+        axios.post("https://jsonplaceholder.typicode.com/posts", this.state)
             .then((response) => {
                 if (response.status == 201) {
                     console.log(response);
@@ -58,7 +57,6 @@ class PostForm extends Component {
                             onChange={this.changeHandler}
                         />
                     </div>
-
                     <div>
                         <label>Title: </label>
                         <input
@@ -69,7 +67,6 @@ class PostForm extends Component {
                             onChange={this.changeHandler}
                         />
                     </div>
-
                     <div>
                         <label>Description: </label>
                         <input
@@ -80,10 +77,8 @@ class PostForm extends Component {
                             onChange={this.changeHandler}
                         />
                     </div>
-
                     <button type="submit">Submit</button>
                 </form>
-
             </div>
         );
     }
