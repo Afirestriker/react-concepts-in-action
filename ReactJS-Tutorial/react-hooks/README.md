@@ -236,11 +236,11 @@ Rules of Hooks:
     ```js
     // JavaScript array reduce
     const reducer = (accumulator, currentValue) => accumulator + currentValue;
-    [1,2,3,4].reduce(reducer /*reducer function*/, 5 /*initialValue*/);
+    const accumulatedValue = [1,2,3,4].reduce(reducer /*reducer function*/, 5 /*initialValue*/);
 
     // React useReducer
     reducer(currentState, action);
-    useReducer(reducer, initialState);
+    const [newState, dispatch] = useReducer(reducer, initialState);
     ```
   * **useReducer is basically changing the state in React component.**
   * It is an alternative to useState.
