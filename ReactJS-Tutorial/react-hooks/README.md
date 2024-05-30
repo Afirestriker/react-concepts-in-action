@@ -231,9 +231,13 @@ Rules of Hooks:
 
 * Lesson 18 - Introduction to useReducer Hook
   * `useReducer` is a hook used for state management.
-  * useReducer is related to the JavaScript reducer functions.
+  * useReducer is related to the JavaScript array reduce reducer functions.
   * Syntax:
     ```js
+    // JavaScript array reduce
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
+    [1,2,3,4].reduce(reducer /*reducer function*/, 5 /*initialValue*/);
+
     // React useReducer
     reducer(currentState, action);
     useReducer(reducer, initialState);
