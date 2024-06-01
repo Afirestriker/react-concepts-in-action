@@ -1,39 +1,39 @@
-## React Tutorial
+# React Tutorial
 
 This tutorial is designed to teach you the Hooks in React, a JavaScript library for building user interfaces.
 
 **Prerequisites:**
+
 * Basic knowledge of HTML and CSS
 * Basic knowledge of JavaScript (ES6)
 * Basic knowledge of React
 
-
 **Steps to creat React App:**
+
 1. Install Node.js and npm.
 2. Create a new directory for your project.
 3. Navigate to the project directory and run the following command:
    1. `npx create-react-app <project-name>`
    2. `npm start` OR `npm run start`
 
-
 **Steps to run existing React App:**
+
 1. Download and install **Node.js** and **npm**
 2. Download and install **Git**
 3. Clone the repository. Use the `git clone` command, followed by the GitHub repository URL.
 4. Navigate to the project directory. Use the command `cd <project-name>`
 5. Install dependencies. Use the command `npm install`
 6. Start the development server. Use the command `npm start`
-7. Access the application. Typically the URL is **http://localhost:3000/**
+7. Access the application. Typically the URL is **<http://localhost:3000/>**
 
-
-```
+```txt
 Rules of Hooks:
   Only Call Hooks at the Top Level. Don't call Hooks inside loops, conditions, or nested functions.
   Only Call Hooks from React Functions. Make sure to call them wihtin React functional component and not just any regular JavaScript function.
 ```
 
+## Tutorial
 
-**Tutorial:**
 * Lesson 1 - React Hoooks - Introduction
   * Hooks are a new feature in React 16.8.
   * Hooks allow you to use React features without having to write a class. For example to use state you have to use Class Component
@@ -42,7 +42,7 @@ Rules of Hooks:
   * You can use hooks in any functional component.
   * There are three main reasons for hooks:
     1. **To avoid the confusion with the this keyword in JavaScript.**
-      * Classes in React use the this keyword, which can be confusing for some developers. Hooks don't use classes, so they avoid this problem.
+       * Classes in React use the this keyword, which can be confusing for some developers. Hooks don't use classes, so they avoid this problem.
     2. **To make it easier to reuse stateful logic between components.**
        * With hooks, you can write reusable functions that contain stateful logic. This can make your code cleaner and easier to maintain.
     3. **To improve the organization of code within a component.**
@@ -60,11 +60,13 @@ Rules of Hooks:
     * Step 2 - Call useState() passing in a default value.
     * Step 3 - Assign the return pair of values to variables using array destructuring. For example
     * Step 4 - Use them while rendering the JSX.
+
     ```js
       const [count, setCount] = useState(0);
       // The variable `count` - will always contains the current state value.
       // `setCount` will accept an argument and set count values to that argument.
     ```
+
   * NOTE:
     * The default/ initial value of useState is never use on Re-renders.
 
@@ -97,6 +99,7 @@ Rules of Hooks:
   * `useEffect` is used for causing side effects in the functional component.
   * The `useEffect` hook help you perform **side effects** in **functional components**, that's too in a much better way compare to Class component.
   * In the class components, the side effects is handled using the lifecycle methods like `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount`.
+
   * ```javascript
       compoentDidMount() {
         document.title = `You clicked ${this.state.count} times.`;     // Repeated code
@@ -108,6 +111,7 @@ Rules of Hooks:
       componentWillUnmount() {
         clearInterval(this.interval);
       } ```
+
   * Unlike class components, the `useEffect` hook helps you avoid code repeatation/ duplication, and grouping together the related code, instead of spliting between
     different lifecycle methods.
   * It is a close replacement for ***componentDidMount***, ***componentDidUpdate***, and ***componentWillUnmount***. I.e, the three lifecycle can be handle using
@@ -170,6 +174,7 @@ Rules of Hooks:
   * **Additional handy tips:**
     * Always think before specifying an empty dependency array.
     * Sometime you might want to call an function within useEffect
+
     * ```js
       //...some functional component statements
       function doSomething() {
@@ -183,7 +188,9 @@ Rules of Hooks:
       }, []);
       //...some functional component statements
       ```
+
     * To prevent above mistake, the recommended is to group related code together:
+
     * ```js
       //...some functional component statements
       useEffect(() => {
@@ -207,10 +214,10 @@ Rules of Hooks:
   * Project: **effect-hook**
   * File: **DataFetchingTwo.js**
   1. Add an Input field for post ID, and fetch data on updating input field value.
-    * Pass an postId to array dependency to make useEffect run on change of the input value.
+     * Pass an postId to array dependency to make useEffect run on change of the input value.
   2. Add an Button element and on click, fetch data based on input field value.
-    * Create new useState `updatedPostId` and update it to `postId` on button click.
-    * Pass `updatedPostId` to useEffect array dependency.
+     * Create new useState `updatedPostId` and update it to `postId` on button click.
+     * Pass `updatedPostId` to useEffect array dependency.
 
 * Lesson 15 - Introduction to useContext
   * Context provides a way to pass data through the component tree without having to pass props down manually at every level.
@@ -233,6 +240,7 @@ Rules of Hooks:
   * `useReducer` is a hook used for state management.
   * useReducer is related to the JavaScript array reduce reducer functions.
   * Syntax:
+
     ```js
     // JavaScript array reduce
     const reducer = (accumulator, currentValue) => accumulator + currentValue;
@@ -242,33 +250,37 @@ Rules of Hooks:
     reducer(currentState, action);
     const [newState, dispatch] = useReducer(reducer, initialState);
     ```
+
   * **useReducer is basically changing the state in React component.**
   * It is an alternative to useState.
   * useState is built using useReducer. I.e. useReducer is more primitive hook compare to useState.
   * So, useReducer is basically changing the state in the react component.
 
 ---
-**Summary on Hooks**
+
+## Summary on Hooks
+
 * **Summarise State-Hook:**
-  - Lesson 1 to 6.
-  - The useState hook allows you to add state to functional components.
-  - To use the useState hook, you call it inside a functional component. This creates a single piece of state for the component.
-  - In classes, the state is always an object. With the useState hook, the state doen't have to be an object.
-  - The state can be an object, an array, a number, a boolean, or a string.
-  - The useState hook returns an array with 2 elements:
-    - The first element is the current value of the state and,
-    - The second element is a state setter function to update the state.
-  - When you call the setter function with a new value, the component will re-render.
-  - If the new state value depends on the previous state value, you can pass a function to the setter function. This setter function will receive the previous state as an argument.
-  - When working with objects or arrays, it's important to spread the state variable before calling the setter function. This ensures that you don't overwrite the original state.
+  * Lesson 1 to 6.
+  * The useState hook allows you to add state to functional components.
+  * To use the useState hook, you call it inside a functional component. This creates a single piece of state for the component.
+  * In classes, the state is always an object. With the useState hook, the state doen't have to be an object.
+  * The state can be an object, an array, a number, a boolean, or a string.
+  * The useState hook returns an array with 2 elements:
+    * The first element is the current value of the state and,
+    * The second element is a state setter function to update the state.
+  * When you call the setter function with a new value, the component will re-render.
+  * If the new state value depends on the previous state value, you can pass a function to the setter function. This setter function will receive the previous state as an argument.
+  * When working with objects or arrays, it's important to spread the state variable before calling the setter function. This ensures that you don't overwrite the original state.
 
 * **Summarise Effect-Hook:**
-  - Lesson 7 to 14
-  - useEffect is an hook used in react functional component.
-  - useEffect help to perform side effect in react functional component.
-  - It's helps mimic the **`componentDidMount`**, **`componentDidUpdate`**, **`componentWillUnmount`** lifecycle methods functionality in react functional component.
+  * Lesson 7 to 14
+  * useEffect is an hook used in react functional component.
+  * useEffect help to perform side effect in react functional component.
+  * It's helps mimic the **`componentDidMount`**, **`componentDidUpdate`**, **`componentWillUnmount`** lifecycle methods functionality in react functional component.
     Through modifying the dependency array according to the need.
-  - For Example:
+  * For Example:
+
     ```js
       // Syntax: useEffect(callbackFunction, dependencyArray);
 
@@ -291,33 +303,40 @@ Rules of Hooks:
     ```
 
 * **Summarize useContext-Hook**
-  - Lesson 15 to 17
-  - `useContext` provides a way to share state between components without prop drilling. This simplifies component code and improves maintainability.
-  - Creating a context: Define a React context using the `React.createContext` function. This creates an object with two components: `Provider` and `Consumer`.
-  - Providing context: Wrap components that share the state with the Provider component. **Pass the state value as a prop to the Provider.**
-  - Consuming context: Use the `useContext` hook within any child component to access the shared state from the nearest Provider above it.
+  * Lesson 15 to 17
+  * `useContext` provides a way to share state between components without prop drilling. This simplifies component code and improves maintainability.
+  * Creating a context: Define a React context using the `React.createContext` function. This creates an object with two components: `Provider` and `Consumer`.
+  * Providing context: Wrap components that share the state with the Provider component. **Pass the state value as a prop to the Provider.**
+  * Consuming context: Use the `useContext` hook within any child component to access the shared state from the nearest Provider above it.
 
 * **Summarize useRecuer-Hook**
   * useRecucer is a hook that is used for state management in React.
   * useRecucer is related to reducer functions.
   * Syntax:
+
     ```js
     // React useReducer
     reducer(currentState, action);
     useReducer(reducer, initialState);
     ```
+
   * **useReducer is basically changing the state in React component.**
 
 ---
 **Q&A:**
-* #### Q1. What is the `useEffect` hook and why is it useful?
-* #### Q2. How to use the `useEffect` hook to set the document title on initial render and subsequent updates.
+
+* ### Q1. What is the `useEffect` hook and why is it useful?
+
+* ### Q2. How to use the `useEffect` hook to set the document title on initial render and subsequent updates
+
   * Asnwer - Lesson 6
 
-* #### Q3. Understanding, how we can use the useEffect hook to set up the document title on initial render of the component, as well as on subsequent renders when the component update's.
+* ### Q3. Understanding, how we can use the useEffect hook to set up the document title on initial render of the component, as well as on subsequent renders when the component update's
+
   * Asnwer - Lesson 7
 
 * ### 04. How does the useEffect hook works?
+
   * Answer
     * When we specify/ implement the useEffect. We are basically requesting react to execute the function that is pass as an argument to the useEffect,
       everytime the component renders.
