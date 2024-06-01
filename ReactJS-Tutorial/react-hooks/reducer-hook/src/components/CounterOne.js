@@ -1,3 +1,5 @@
+// useReducer simple state and action
+
 import React, { useReducer } from 'react';
 
 const initialValue = 0;
