@@ -256,6 +256,12 @@ Rules of Hooks:
   * useState is built using useReducer. I.e. useReducer is more primitive hook compare to useState.
   * So, useReducer is basically changing the state in the react component.
 
+* Lesson 19 - useReducer (simple state and action)
+  * Project: **reducer-hook**
+  * File: **CounterOne.js**
+  * Import the `useReducer` hook from react and implement the simple state and action.
+  * By simple state and action, its means using a primitive value for state and string for action instead of using array/ object.
+
 ---
 
 ## Summary on Hooks
