@@ -265,10 +265,11 @@ Rules of Hooks:
 * Lesson 20 - useReducer (complex state and action)
   * Project: **reducer-hook**
   * File: **CounterTwo.js**
-  * Using useReducer hook with state object and action object.
-    * Benefits:
-      * Maintain multiple value inside single state. Best suited for global state.
-      * Pass addon data with action for updating state.
+  * Design and built a new component, `CounterTwo.js`, to demonstrate a more complex use of the `useReducer` hook.
+  * Instead of managing a simple counter with a primitive state, `CounterTwo` showcases how to manage a state object using `useReducer`. This is particularly beneficial for:
+    1. **Managing Multiple Values in a Single State:** The state now holds an object `{ firstCounter: 0 }`, allowing you to easily scale up and track multiple related values within a single state object. This is especially relevant for managing global state where you might have various properties to track.
+    2. **Passing Additional Data with Actions:**  The code demonstrates passing additional data to the reducer function through the `action` object. For instance, the increment/decrement actions now accept a `value` property to control the increment/decrement step, making the component more flexible.
+  * Essentially, this commit elevates the `useReducer` example from a simple counter to a more realistic scenario of managing complex state transitions, highlighting the advantages and flexibility it offers for real-world applications.
 
 ---
 
