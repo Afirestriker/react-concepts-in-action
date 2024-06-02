@@ -278,6 +278,10 @@ Rules of Hooks:
   * Previously, the component only managed a single counter (`firstCounter`). This update adds a `secondCounter` to the `initialState` and implements corresponding actions in the reducer function: `incrementCounter2` and `decrementCounter2`. These actions allow independent control of the second counter's value.
   * The UI is also updated to display and interact with both counters. This showcases how a single reducer can effectively manage multiple pieces of state, promoting better organization and maintainability within the component.
 
+* Lesson 21 - Multiple useReducer
+  * Project: **reducer-hook**
+  * File: **CounterThree.js**
+
 ---
 
 ## Summary on Hooks
