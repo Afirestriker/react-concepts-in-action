@@ -4,7 +4,7 @@ import React, { useReducer } from 'react';
 
 const initialValue = 0;
 
-const reducer = (state, action) => {
+const reducer = (state /* current value */, action /* action to perform on state*/) => {
     switch(action) {
         case 'increment': return state + 1;
         case 'decrement': return state - 1;
@@ -14,7 +14,7 @@ const reducer = (state, action) => {
 };
 
 const CounterOne = () => {
-    const [count, dispatch] = useReducer(reducer, initialValue);
+    const [count, dispatch] = useReducer(reducer /* reducer function */, initialValue /* initial state value */);
 
     console.log("CounterOne Rendered")
 
