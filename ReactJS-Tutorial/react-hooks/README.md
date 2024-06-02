@@ -262,6 +262,14 @@ Rules of Hooks:
   * Import the `useReducer` hook from react and implement the simple state and action.
   * By simple state and action, its means using a primitive value for state and string for action instead of using array/ object.
 
+* Lesson 20 - useReducer (complex state and action)
+  * Project: **reducer-hook**
+  * File: **CounterTwo.js**
+  * Using useReducer hook with state object and action object.
+    * Benefits:
+      * Maintain multiple value inside single state. Best suited for global state.
+      * Pass addon data with action for updating state.
+
 ---
 
 ## Summary on Hooks
