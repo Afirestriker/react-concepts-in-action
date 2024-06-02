@@ -271,6 +271,13 @@ Rules of Hooks:
     2. **Passing Additional Data with Actions:**  The code demonstrates passing additional data to the reducer function through the `action` object. For instance, the increment/decrement actions now accept a `value` property to control the increment/decrement step, making the component more flexible.
   * Essentially, this commit elevates the `useReducer` example from a simple counter to a more realistic scenario of managing complex state transitions, highlighting the advantages and flexibility it offers for real-world applications.
 
+* Lesson 20 (part-2) - useReducer (complex state and action)
+  * Project: **reducer-hook**
+  * File: **CounterTwo.js**
+  * This code change introduces the ability to manage two separate counters within the `CounterTwo` component using a single `useReducer` hook.
+  * Previously, the component only managed a single counter (`firstCounter`). This update adds a `secondCounter` to the `initialState` and implements corresponding actions in the reducer function: `incrementCounter2` and `decrementCounter2`. These actions allow independent control of the second counter's value.
+  * The UI is also updated to display and interact with both counters. This showcases how a single reducer can effectively manage multiple pieces of state, promoting better organization and maintainability within the component.
+
 ---
 
 ## Summary on Hooks
