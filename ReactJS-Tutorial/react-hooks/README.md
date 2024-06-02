@@ -281,6 +281,9 @@ Rules of Hooks:
 * Lesson 21 - Multiple useReducer
   * Project: **reducer-hook**
   * File: **CounterThree.js**
+  * This code change introduces a new component, `CounterThree`, to demonstrate how to manage multiple pieces of state within a single component using multiple `useReducer` hooks.
+  * Instead of creating separate reducers for each counter, `CounterThree` employs a single `reducer` function for both `count` and `countTwo`. This approach reduces redundancy and promotes code reuse, as both counters exhibit the same incrementing, decrementing, and resetting behavior.
+  * Essentially, this change highlights an elegant way to handle similar state updates efficiently, enhancing the organization and maintainability of the codebase.
 
 ---
 
