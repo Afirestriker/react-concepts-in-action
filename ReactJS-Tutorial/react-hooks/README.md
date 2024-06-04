@@ -285,6 +285,15 @@ Rules of Hooks:
   * Instead of creating separate reducers for each counter, `CounterThree` employs a single `reducer` function for both `count` and `countTwo`. This approach reduces redundancy and promotes code reuse, as both counters exhibit the same incrementing, decrementing, and resetting behavior.
   * Essentially, this change highlights an elegant way to handle similar state updates efficiently, enhancing the organization and maintainability of the codebase.
 
+* Lesson 22 - useReducer with useContext
+  * Project: **reducer-hook**
+  * File: **CounterFour.js, CounterFourA.js, CounterFourB.js, CounterFourC.js, CounterFourD.js**
+  * Component Nesting:
+    * CounterFour -> CounterFourA -> CounterFourB
+    * CounterFour -> CounterFourA -> CounterFourC -> CounterFourD
+  * `useReducer` inside a component works as a Local State Management.
+  * But in case when you want to share State between component i.e. Global State Management. We use `useContext + useReducer`
+
 ---
 
 ## Summary on Hooks
