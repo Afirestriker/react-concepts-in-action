@@ -291,8 +291,16 @@ Rules of Hooks:
   * Component Nesting:
     * CounterFour -> CounterFourA -> CounterFourB
     * CounterFour -> CounterFourA -> CounterFourC -> CounterFourD
-  * `useReducer` inside a component works as a Local State Management.
-  * But in case when you want to share State between component i.e. Global State Management. We use `useContext + useReducer`
+  * `useReducer` inside a component is Local to that component i.e. Local State Management.
+  * In case you want to share state between component without prof deeling. You need to main a Global State. I.e. Global State Management.
+  * To do so, we have a Context API (createContext and useContext) provided by React.
+  * This code change introduces a new counter component (`CounterFour`) that demonstrates global state management in React using `useReducer` and `useContext`.
+  * Previously, `useReducer` was used for local state management within individual components. This change addresses the need for sharing state across multiple nested components.
+  * The key changes are:
+    * A new context (`CountContext`) is created to hold the global state (`countValue`) and the dispatch function (`countDispatch`).
+    * `CounterFour` uses `useReducer` to manage the counter state and provides this context to its children components.
+    * Nested components (`CounterFourB` and `CounterFourD`) can access and update the shared counter state by utilizing `useContext` to consume the `CountContext`.
+  * This approach offers a more efficient way to manage state globally, as opposed to passing props down through multiple levels, thereby improving code structure and maintainability when dealing with shared state.
 
 ---
 
