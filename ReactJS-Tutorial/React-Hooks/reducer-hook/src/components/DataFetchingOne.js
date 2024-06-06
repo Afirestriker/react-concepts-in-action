@@ -2,21 +2,21 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const DataFetchningOne = (props) => {
-    const [isLoading, setIsLoading] = useState(true);
-    const [isError, setIsError] = useState(null);
-    const [data, setData] = useState({});
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+    const [post, setPost] = useState({});
 
     useEffect(() => {
         axios.get('https://jsonplaceholder.typicode.com/posts/1')
             .then(response => {
-                if (response.status === 200) setData(response.data);
-                else setIsError('Unknown Error. Please try again...!');
+                if (response.status === 200) setPost(response.data);
+                else setError('Unknown Error. Please try again...!');
             })
             .catch(error => {
-                setIsError(error.message);
+                setError(error.message);
             })
             .finally(() => {
-                setIsLoading(false)
+                setLoading(false)
             });
     }, []);
 
@@ -24,9 +24,9 @@ const DataFetchningOne = (props) => {
         <div>
             Data Fetching Using useState
             <div style={{color: '#410c7a', fontWeight: '500'}} >
-                {isLoading && " Loading..."}
-                {isError}
-                {data.body ?? ''}
+                {loading && " Loading..."}
+                {error}
+                {post.body ?? ''}
             </div>
         </div>
     );
