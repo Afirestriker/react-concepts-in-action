@@ -302,6 +302,14 @@ Rules of Hooks:
     * Nested components (`CounterFourB` and `CounterFourD`) can access and update the shared counter state by utilizing `useContext` to consume the `CountContext`.
   * This approach offers a more efficient way to manage state globally, as opposed to passing props down through multiple levels, thereby improving code structure and maintainability when dealing with shared state.
 
+* Lesson 23 - Fetching data with useState
+  * Project: **reducer-hook**
+  * File: **DataFetchingOne.js**
+  * An example on fetching data using useState and then in next turial with useReducer.
+  * This code change introduces a new component, `DataFetchingOne`, which is responsible for fetching data from an external API and displaying it to the user.
+  * The component utilizes the `useState` and `useEffect` hooks for managing the different states of the data fetching process (loading, error, and success) and for fetching the data when the component mounts, respectively. This approach provides a clean and efficient way to handle asynchronous operations and update the UI based on the data fetching results.
+  * Additionally, the component provides visual feedback to the user by displaying a loading message while fetching the data and an error message if the request fails. This enhances the user experience by providing transparency and clarity about the data fetching process.
+
 ---
 
 ## Summary on Hooks
