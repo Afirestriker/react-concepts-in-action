@@ -318,6 +318,8 @@ Rules of Hooks:
   * The component fetches data from `'https://jsonplaceholder.typicode.com/posts/1'` when it mounts and uses the reducer to dispatch actions based on the result of the fetch request. This updates the state accordingly, visually providing loading or error messages, and ultimately renders the fetched post data.
   * This approach offers a structured alternative to using multiple `useState` hooks for complex data fetching scenarios. This makes the state management more organized and potentially easier to scale.
 
+* Lesson 25 - useState and useReducer
+
 ---
 
 ## Summary on Hooks
