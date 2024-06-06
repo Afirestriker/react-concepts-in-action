@@ -5,6 +5,7 @@ import CounterTwo from "./components/CounterTwo";
 import CounterThree from "./components/CounterThree";
 import CounterFour from "./components/CounterFour";
 import DataFetchningOne from "./components/DataFetchingOne";
+import DataFetchingTwo from "./components/DataFetchingTwo";
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
             {/* <CounterThree /> */}
             {/* <CounterFour /> */}
             <DataFetchningOne />
+            <DataFetchingTwo />
         </div>
     );
 }

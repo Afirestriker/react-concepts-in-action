@@ -310,6 +310,10 @@ Rules of Hooks:
   * The component utilizes the `useState` and `useEffect` hooks for managing the different states of the data fetching process (loading, error, and success) and for fetching the data when the component mounts, respectively. This approach provides a clean and efficient way to handle asynchronous operations and update the UI based on the data fetching results.
   * Additionally, the component provides visual feedback to the user by displaying a loading message while fetching the data and an error message if the request fails. This enhances the user experience by providing transparency and clarity about the data fetching process.
 
+* Lesson 24 - Fetching data with useReducer
+  * Project: **reducer-hook**
+  * File: **DataFetchingTwo.js**
+
 ---
 
 ## Summary on Hooks
