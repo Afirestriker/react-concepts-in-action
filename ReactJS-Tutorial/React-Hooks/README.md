@@ -313,6 +313,10 @@ Rules of Hooks:
 * Lesson 24 - Fetching data with useReducer
   * Project: **reducer-hook**
   * File: **DataFetchingTwo.js**
+  * This code change introduces a new React component, `DataFetchingTwo.js`, that demonstrates how to fetch data using the `useReducer` hook alongside `useEffect`.
+  * Instead of managing loading, error, and data states individually with `useState`, this component employs a reducer. The reducer function consolidates state logic into a single entity, making the code cleaner and potentially easier to maintain, especially as the complexity of data fetching logic grows.
+  * The component fetches data from `'https://jsonplaceholder.typicode.com/posts/1'` when it mounts and uses the reducer to dispatch actions based on the result of the fetch request. This updates the state accordingly, visually providing loading or error messages, and ultimately renders the fetched post data.
+  * This approach offers a structured alternative to using multiple `useState` hooks for complex data fetching scenarios. This makes the state management more organized and potentially easier to scale.
 
 ---
 
