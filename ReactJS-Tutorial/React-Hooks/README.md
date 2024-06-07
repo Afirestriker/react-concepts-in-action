@@ -319,6 +319,13 @@ Rules of Hooks:
   * This approach offers a structured alternative to using multiple `useState` hooks for complex data fetching scenarios. This makes the state management more organized and potentially easier to scale.
 
 * Lesson 25 - useState and useReducer
+    | Feature                         | useState                  | useReducer              |
+    |---------------------------------|---------------------------|-------------------------|
+    | Type of state                   | Number, String, Boolean   | Object or Array         |
+    | Number of state transitions     | One or two                | Too many                |
+    | Related state transitions?      | No                        | Yes                     |
+    | Business logic                  | No business logic         | Complex business logic  |
+    | Local vs global                 | Local                     | Global                  |
 
 ---
 
