@@ -310,6 +310,37 @@ Rules of Hooks:
   * The component utilizes the `useState` and `useEffect` hooks for managing the different states of the data fetching process (loading, error, and success) and for fetching the data when the component mounts, respectively. This approach provides a clean and efficient way to handle asynchronous operations and update the UI based on the data fetching results.
   * Additionally, the component provides visual feedback to the user by displaying a loading message while fetching the data and an error message if the request fails. This enhances the user experience by providing transparency and clarity about the data fetching process.
 
+* Lesson 24 - Fetching data with useReducer
+  * Project: **reducer-hook**
+  * File: **DataFetchingTwo.js**
+  * This code change introduces a new React component, `DataFetchingTwo.js`, that demonstrates how to fetch data using the `useReducer` hook alongside `useEffect`.
+  * Instead of managing loading, error, and data states individually with `useState`, this component employs a reducer. The reducer function consolidates state logic into a single entity, making the code cleaner and potentially easier to maintain, especially as the complexity of data fetching logic grows.
+  * The component fetches data from `'https://jsonplaceholder.typicode.com/posts/1'` when it mounts and uses the reducer to dispatch actions based on the result of the fetch request. This updates the state accordingly, visually providing loading or error messages, and ultimately renders the fetched post data.
+  * This approach offers a structured alternative to using multiple `useState` hooks for complex data fetching scenarios. This makes the state management more organized and potentially easier to scale.
+
+* Lesson 25 - useState and useReducer
+    | Feature                         | useState                  | useReducer              |
+    |---------------------------------|---------------------------|-------------------------|
+    | Type of state                   | Number, String, Boolean   | Object or Array         |
+    | Number of state transitions     | One or two                | Too many                |
+    | Related state transitions?      | No                        | Yes                     |
+    | Business logic                  | No business logic         | Complex business logic  |
+    | Local vs global                 | Local                     | Global                  |
+
+* Lesson 26 - useCallback
+  * Project: **callback-hook**
+  * File: **ParentComponent.js, Title.js, Count.js, Button.js**
+  * useCallback hook helps in performance improvement.
+  * useCallback is a hook that will return a memoized version of the callback function that only changes if one of the dependencies has changed.
+  * It is useful when passing callback to optimized child components that rely on reference equality to prevent unecessary renders.
+  * Imp: Though useCallback improve performance, it has its own drawback as well [Read More](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqblVtZHlxc0pweEttR3MtYkduZkNPc0JJU0hTQXxBQ3Jtc0tsZDdZSjk0RXVsRldIM1REZ2Q2STIybllER3pyTVlQRU45emVUa1dSZ2ktNXMycXhLa01xT3lWYUxCTWEwbHFnN2lNY0N1YVBRUEVRSmItWmRMZVZ5ZG1fTFhrNlUwdHNDNjZGaTRZbnU1Yl9uWEdHaw&q=https%3A%2F%2Fkentcdodds.com%2Fblog%2Fusememo-and-usecallback&v=IL82CzlaCys).
+
+* Lesson 27 - useMemo
+  * Project: **memo-hook**
+  * File: **counter.js**
+  * useMemo and useCallback both are use for performance improvement utilizing memoization.
+  * But unlike useCallback that memoize the function instance, useMemo memoize the output.
+
 ---
 
 ## Summary on Hooks
