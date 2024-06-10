@@ -340,11 +340,18 @@ Rules of Hooks:
   * File: **counter.js**
   * useMemo and useCallback both are use for performance improvement utilizing memoization.
   * But unlike useCallback that memoize the function instance, useMemo memoize the output.
+  * The `useMemo` Hook lesson showcases its ability to optimize performance by memoizing expensive calculation results, improving rendering efficiency.
 
 * Lesson 28 - useRef Hook
   * Project: **ref-hook**
   * File: **FocusInput.js**
-  * Focus the input on component load. Using useRef hook.
+  * 1st usage  - Focus the input on component load. Using useRef hook.
+  * 2nd usage - It can be used to create a generic container, which can hold a mutable value, similar to instance property on a class component. This generic contaienr does not cause re-renders when the data it stores changes. At the same time, it also remembers the store data event after other state variables cause the re-render of these component.
+  * A simple usecase is clearing interval timer from a event handler.
+  * Additionally, the `useRef` Hook lesson illustrates its versatility by:
+    * Programmatically focusing input elements on component load.
+    * Creating mutable containers for values that persist across renders without triggering re-renders, unlike state variables.
+    * Providing a method to clear interval timers within event handlers, addressing a common issue in React component lifecycles.
 
 ---
 
