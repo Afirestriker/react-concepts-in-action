@@ -327,7 +327,7 @@ Rules of Hooks:
     | Business logic                  | No business logic         | Complex business logic  |
     | Local vs global                 | Local                     | Global                  |
 
-* Lesson 26 - useCallback
+* Lesson 26 - useCallback Hook
   * Project: **callback-hook**
   * File: **ParentComponent.js, Title.js, Count.js, Button.js**
   * useCallback hook helps in performance improvement.
@@ -335,11 +335,16 @@ Rules of Hooks:
   * It is useful when passing callback to optimized child components that rely on reference equality to prevent unecessary renders.
   * Imp: Though useCallback improve performance, it has its own drawback as well [Read More](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqblVtZHlxc0pweEttR3MtYkduZkNPc0JJU0hTQXxBQ3Jtc0tsZDdZSjk0RXVsRldIM1REZ2Q2STIybllER3pyTVlQRU45emVUa1dSZ2ktNXMycXhLa01xT3lWYUxCTWEwbHFnN2lNY0N1YVBRUEVRSmItWmRMZVZ5ZG1fTFhrNlUwdHNDNjZGaTRZbnU1Yl9uWEdHaw&q=https%3A%2F%2Fkentcdodds.com%2Fblog%2Fusememo-and-usecallback&v=IL82CzlaCys).
 
-* Lesson 27 - useMemo
+* Lesson 27 - useMemo Hook
   * Project: **memo-hook**
   * File: **counter.js**
   * useMemo and useCallback both are use for performance improvement utilizing memoization.
   * But unlike useCallback that memoize the function instance, useMemo memoize the output.
+
+* Lesson 28 - useRef Hook
+  * Project: **ref-hook**
+  * File: **FocusInput.js**
+  * Focus the input on component load. Using useRef hook.
 
 ---
 
