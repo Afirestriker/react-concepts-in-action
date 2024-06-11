@@ -342,7 +342,7 @@ Rules of Hooks:
   * But unlike useCallback that memoize the function instance, useMemo memoize the output.
   * The `useMemo` Hook lesson showcases its ability to optimize performance by memoizing expensive calculation results, improving rendering efficiency.
 
-* Lesson 28 - useRef Hook
+* Lesson 28 & 29 - useRef Hook
   * Project: **ref-hook**
   * File: **FocusInput.js, ClassTimer.js, HookTimer.js**
   * 1st usage  - Focus the input on component load. Using useRef hook.
@@ -353,10 +353,16 @@ Rules of Hooks:
     * Creating mutable containers for values that persist across renders without triggering re-renders, unlike state variables.
     * Providing a method to clear interval timers within event handlers, addressing a common issue in React component lifecycles.
 
-* Lesson 29 - Custom Hooks
+* Lesson 30 - Custom Hooks
   * A custom hook is basically a JavaScript function whose name starts with `use`.
   * A custom hook can also call other hooks if required.
   * Useful in sharing logic, as an alternative way to HOCs and Render Props.
+
+* Lesson 31 - useDocumentTitle Custom Hook
+  * Project: **custom-hook**
+  * File: **DocTitleOne.js, DocTitleTwo.js, useDocumentTitle.js**
+  * Introduction to custom hook.
+  * Design and built a useDocumentTitle custom hook to share the logic for updating the document title.
 
 ---
 
