@@ -364,6 +364,11 @@ Rules of Hooks:
   * Introduction to custom hook.
   * Design and built a useDocumentTitle custom hook to share the logic for updating the document title.
 
+* Lesson 32 - useCounter Custom Hook
+  * Project: **custom-hook**
+  * File: **CounterOne.js, CounterTwo.js, useCounter.js**
+  * Design and built a new custom hook `useCounter` to share the common logic of create a counter using useState with appropriate function for increment, decrement, and resetting the counter value.
+
 ---
 
 ## Summary on Hooks
