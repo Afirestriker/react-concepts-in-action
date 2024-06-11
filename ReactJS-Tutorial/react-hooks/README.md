@@ -344,7 +344,7 @@ Rules of Hooks:
 
 * Lesson 28 - useRef Hook
   * Project: **ref-hook**
-  * File: **FocusInput.js**
+  * File: **FocusInput.js, ClassTimer.js, HookTimer.js**
   * 1st usage  - Focus the input on component load. Using useRef hook.
   * 2nd usage - It can be used to create a generic container, which can hold a mutable value, similar to instance property on a class component. This generic contaienr does not cause re-renders when the data it stores changes. At the same time, it also remembers the store data event after other state variables cause the re-render of these component.
   * A simple usecase is clearing interval timer from a event handler.
@@ -352,6 +352,11 @@ Rules of Hooks:
     * Programmatically focusing input elements on component load.
     * Creating mutable containers for values that persist across renders without triggering re-renders, unlike state variables.
     * Providing a method to clear interval timers within event handlers, addressing a common issue in React component lifecycles.
+
+* Lesson 29 - Custom Hooks
+  * A custom hook is basically a JavaScript function whose name starts with `use`.
+  * A custom hook can also call other hooks if required.
+  * Useful in sharing logic, as an alternative way to HOCs and Render Props.
 
 ---
 
