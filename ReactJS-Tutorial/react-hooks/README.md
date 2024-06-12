@@ -440,6 +440,9 @@ Rules of Hooks:
 
   * **useReducer is basically changing the state in React component.**
 
+* **useCallback Hook, useMemo Hook, useRef Hook, and Custom Hook**
+  * Read lesson note.
+
 ---
 **Q&A:**
 
