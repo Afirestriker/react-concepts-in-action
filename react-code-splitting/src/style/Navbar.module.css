@@ -1,0 +1,11 @@
+.nav-div {
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    border-bottom: dotted 2px;
+}
+
+.nav-para {
+    font-size: 0.7rem;
+}
